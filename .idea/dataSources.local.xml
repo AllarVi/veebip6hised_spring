@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - backpacedb1@localhost" uuid="906a6f42-f16a-4156-8368-ff7c9393e542">
+      <secret-storage>master_key</secret-storage>
+      <user-name>allar</user-name>
+      <schema-pattern>backpacedb1.pg_catalog backpacedb1.public</schema-pattern>
+      <default-schemas>backpacedb1.public</default-schemas>
+    </data-source>
+  </component>
+</project>
