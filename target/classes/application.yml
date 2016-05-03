@@ -1,0 +1,11 @@
+spring:
+    datasource:
+        password: ucJMCWgUikBdIiJklALR00G8ilTeDNzM
+        url: jdbc:postgresql://localhost:5432/backpacedb1
+        username: allar
+    jpa:
+        hibernate:
+            ddl-auto: create
+    resources:
+        chain:
+            enabled: true
