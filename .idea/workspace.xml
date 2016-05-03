@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aa16473-7186-4e9e-ae34-01436127ddd8" name="Default" comment="Checkpoint: Working on backend part of Facebook authentication. Added RestController for PaceUser.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar.original" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/Application$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/BaseController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/Customer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/CustomerRepository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/CustomerRestController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/PaceUser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/UserController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/UserRepository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/AbstractControllerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/AbstractTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerMocksTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserRepositoryTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
@@ -9,11 +25,25 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_3_3_RELEASE.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_5_RELEASE.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/BaseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/AbstractTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserControllerTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserRepositoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerMocksTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserRepositoryTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerMocksTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserRepositoryTest.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserController.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserControllerTest.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hello/Application.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hello/Customer.class" afterPath="" />
@@ -23,7 +53,6 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/examples/CustomerRepository.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/CustomerRestController.java" afterPath="$PROJECT_DIR$/src/main/java/application/examples/CustomerRestController.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/PaceUser.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/PaceUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -1294,7 +1323,7 @@
       <workItem from="1461337147491" duration="5078000" />
       <workItem from="1461513553371" duration="14783000" />
       <workItem from="1461854744876" duration="9635000" />
-      <workItem from="1462276518282" duration="7016000" />
+      <workItem from="1462276518282" duration="7043000" />
     </task>
     <task id="LOCAL-00001" summary="Checkpoint: Working on backend part of Facebook authentication. Added RestController for PaceUser.">
       <created>1461523293397</created>
@@ -1339,7 +1368,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52458000" />
+    <option name="totallyTimeSpent" value="52485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
