@@ -1,7 +1,5 @@
 package application;
 
-import application.AbstractTest;
-import application.BaseController;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -67,8 +65,8 @@ public abstract class AbstractControllerTest extends AbstractTest {
      * @throws JsonMappingException Thrown if an error occurs while mapping.
      * @throws IOException          Thrown if an error occurs while mapping.
      */
-    protected <T> T mapFromJson(String json, Class<T> clazz)
-            throws JsonParseException, JsonMappingException, IOException {
+    protected <T> T mapFromJson(String json, Class<T> clazz) throws JsonParseException,
+            JsonMappingException, IOException {
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(json, clazz);
     }

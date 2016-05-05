@@ -44,8 +44,7 @@ public class UserControllerMocksTest extends AbstractControllerTest {
         // Perform the behavior being tested
         String uri = "/api/users";
 
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.get(uri).accept(MediaType
-                .APPLICATION_JSON)).andReturn();
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get(uri).accept(MediaType.APPLICATION_JSON)).andReturn();
 
         // Extract the response status and body
         String content = result.getResponse().getContentAsString();
@@ -56,18 +55,14 @@ public class UserControllerMocksTest extends AbstractControllerTest {
 
         // Perform standard JUnit assertions on the response
         Assert.assertEquals("failure - expected HTTP status 200", 200, status);
-        Assert.assertTrue("failure - expected HTTP response body to have a value", content.trim()
-                .length() > 0);
+        Assert.assertTrue("failure - expected HTTP response body to have a value", content.trim().length() > 0);
     }
 
     private Iterable<PaceUser> getEntityListStubData() {
 
         // TODO: email: profileInfo.email,
         return () -> {
-            PaceUser paceUserAuthSuccess = new PaceUser();
-            paceUserAuthSuccess.setName("William Wallace");
-            paceUserAuthSuccess.setFacebookId("123451234512345");
-            paceUserAuthSuccess.setAuthResponse("success");
+            PaceUser paceUserAuthSuccess = getPaceUserAuthSuccess();
 
             ArrayList<PaceUser> entityList = new ArrayList<>();
             entityList.add(paceUserAuthSuccess);
@@ -75,7 +70,16 @@ public class UserControllerMocksTest extends AbstractControllerTest {
             return entityList.iterator();
         };
     }
-//
+
+    private PaceUser getPaceUserAuthSuccess() {
+        PaceUser paceUserAuthSuccess = new PaceUser();
+        paceUserAuthSuccess.setName("William Wallace");
+        paceUserAuthSuccess.setFacebookId("123451234512345");
+        paceUserAuthSuccess.setAuthResponse("success");
+        return paceUserAuthSuccess;
+    }
+
+    //
 //    @Test
 //    public void testGetGreeting() throws Exception {
 //
@@ -135,92 +139,76 @@ public class UserControllerMocksTest extends AbstractControllerTest {
 //
 //    }
 //
-//    @Test
-//    public void testCreateGreeting() throws Exception {
-//
-//        // Create some test data
-//        Greeting entity = getEntityStubData();
-//
-//        // Stub the GreetingService.create method return value
-//        when(greetingService.create(any(Greeting.class))).thenReturn(entity);
-//
-//        // Perform the behavior being tested
-//        String uri = "/api/greetings";
-//        String inputJson = super.mapToJson(entity);
-//
-//        MvcResult result = mvc
-//                .perform(MockMvcRequestBuilders.post(uri)
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .accept(MediaType.APPLICATION_JSON).content(inputJson))
-//                .andReturn();
-//
-//        // Extract the response status and body
-//        String content = result.getResponse().getContentAsString();
-//        int status = result.getResponse().getStatus();
-//
-//        // Verify the GreetingService.create method was invoked once
-//        verify(greetingService, times(1)).create(any(Greeting.class));
-//
-//        // Perform standard JUnit assertions on the test results
-//        Assert.assertEquals("failure - expected HTTP status 201", 201, status);
-//        Assert.assertTrue(
-//                "failure - expected HTTP response body to have a value",
-//                content.trim().length() > 0);
-//
-//        Greeting createdEntity = super.mapFromJson(content, Greeting.class);
-//
-//        Assert.assertNotNull("failure - expected entity not null",
-//                createdEntity);
-//        Assert.assertNotNull("failure - expected id attribute not null",
-//                createdEntity.getId());
-//        Assert.assertEquals("failure - expected text attribute match",
-//                entity.getText(), createdEntity.getText());
-//    }
-//
-//    @Test
-//    public void testUpdateGreeting() throws Exception {
-//
-//        // Create some test data
-//        Greeting entity = getEntityStubData();
-//        entity.setText(entity.getText() + " test");
-//        Long id = new Long(1);
-//
-//        // Stub the GreetingService.update method return value
-//        when(greetingService.update(any(Greeting.class))).thenReturn(entity);
-//
-//        // Perform the behavior being tested
-//        String uri = "/api/greetings/{id}";
-//        String inputJson = super.mapToJson(entity);
-//
-//        MvcResult result = mvc
-//                .perform(MockMvcRequestBuilders.put(uri, id)
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .accept(MediaType.APPLICATION_JSON).content(inputJson))
-//                .andReturn();
-//
-//        // Extract the response status and body
-//        String content = result.getResponse().getContentAsString();
-//        int status = result.getResponse().getStatus();
-//
-//        // Verify the GreetingService.update method was invoked once
-//        verify(greetingService, times(1)).update(any(Greeting.class));
-//
-//        // Perform standard JUnit assertions on the test results
-//        Assert.assertEquals("failure - expected HTTP status 200", 200, status);
-//        Assert.assertTrue(
-//                "failure - expected HTTP response body to have a value",
-//                content.trim().length() > 0);
-//
-//        Greeting updatedEntity = super.mapFromJson(content, Greeting.class);
-//
-//        Assert.assertNotNull("failure - expected entity not null",
-//                updatedEntity);
-//        Assert.assertEquals("failure - expected id attribute unchanged",
-//                entity.getId(), updatedEntity.getId());
-//        Assert.assertEquals("failure - expected text attribute match",
-//                entity.getText(), updatedEntity.getText());
-//
-//    }
+    @Test
+    public void testCreatePaceUser() throws Exception {
+
+        // Create some test data
+        PaceUser entity = getPaceUserAuthSuccess();
+
+        // Stub the UserRepository.save method return value
+        when(userRepository.save(any(PaceUser.class))).thenReturn(entity);
+
+        // Perform the behavior being tested
+        String uri = "/api/user";
+        String inputJson = super.mapToJson(entity);
+
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON).content(inputJson)).andReturn();
+
+        // Extract the response status and body
+        String content = result.getResponse().getContentAsString();
+        int status = result.getResponse().getStatus();
+
+        // Verify the userRepository.save method was invoked once
+        verify(userRepository, times(1)).save(any(PaceUser.class));
+
+        // Perform standard JUnit assertions on the test results
+        Assert.assertEquals("failure - expected HTTP status 201", 201, status);
+        Assert.assertTrue("failure - expected HTTP response body to have a value", content.trim().length() > 0);
+
+        PaceUser createdEntity = super.mapFromJson(content, PaceUser.class);
+
+        Assert.assertNotNull("failure - expected entity not null", createdEntity);
+        Assert.assertNotNull("failure - expected id attribute not null", createdEntity.getId());
+        Assert.assertEquals("failure - expected text attribute match", entity.getName(), createdEntity.getName());
+    }
+
+    @Test
+    public void testUpdateGreeting() throws Exception {
+
+        // Create some test data
+        PaceUser entity = getPaceUserAuthSuccess();
+        entity.setAuthResponse(entity.getAuthResponse() + " test");
+        Long id = 1L;
+
+        // Stub the UserRepository.save method return value
+        when(userRepository.save(any(PaceUser.class))).thenReturn(entity);
+
+//         Perform the behavior being tested
+        String uri = "/api/user";
+        String inputJson = super.mapToJson(entity);
+
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.post(uri, id).contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON).content(inputJson)).andReturn();
+
+        // Extract the response status and body
+        String content = result.getResponse().getContentAsString();
+        int status = result.getResponse().getStatus();
+
+        // Verify the GreetingService.update method was invoked once
+        verify(userRepository, times(1)).save(any(PaceUser.class));
+
+        // Perform standard JUnit assertions on the test results
+        Assert.assertEquals("failure - expected HTTP status 201", 201, status);
+        Assert.assertTrue("failure - expected HTTP response body to have a value", content.trim().length() > 0);
+
+        PaceUser updatedEntity = super.mapFromJson(content, PaceUser.class);
+
+        Assert.assertNotNull("failure - expected entity not null", updatedEntity);
+        Assert.assertEquals("failure - expected id attribute unchanged", entity.getId(), updatedEntity.getId());
+        Assert.assertEquals("failure - expected text attribute match", entity.getAuthResponse(), updatedEntity
+                .getAuthResponse());
+    }
 //
 //    @Test
 //    public void testDeleteGreeting() throws Exception {

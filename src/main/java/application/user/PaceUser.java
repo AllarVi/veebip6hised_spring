@@ -18,6 +18,8 @@ public class PaceUser {
 
     private String authResponse;
 
+    private String picture;
+
     protected PaceUser() {
     }
 
@@ -61,6 +63,14 @@ public class PaceUser {
 
     public void setAuthResponse(String authResponse) {
         this.authResponse = authResponse;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }
 

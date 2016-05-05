@@ -2,62 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aa16473-7186-4e9e-ae34-01436127ddd8" name="Default" comment="Checkpoint: Working on backend part of Facebook authentication. Added RestController for PaceUser.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar.original" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/Application$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/Application.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/BaseController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/Customer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/CustomerRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/examples/CustomerRestController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/PaceUser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/UserController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application/user/UserRepository.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/AbstractControllerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/AbstractTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerMocksTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserRepositoryTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_3_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/BaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/AbstractTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserControllerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserRepositoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/application.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerMocksTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserRepositoryTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerMocksTest.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerTest.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserRepositoryTest.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserControllerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hello/Application.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hello/Customer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/hello/CustomerRepository.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/Application.java" afterPath="$PROJECT_DIR$/src/main/java/application/Application.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/application/examples/Customer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/examples/CustomerRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/CustomerRestController.java" afterPath="$PROJECT_DIR$/src/main/java/application/examples/CustomerRestController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/PaceUser.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/PaceUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/hello/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/BackPace-0.1.0.jar" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/BackPace-0.1.0.jar.original" afterPath="$PROJECT_DIR$/target/BackPace-0.1.0.jar.original" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application/Application$1.class" afterPath="$PROJECT_DIR$/target/classes/application/Application$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application/user/PaceUser.class" afterPath="$PROJECT_DIR$/target/classes/application/user/PaceUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application/user/UserController.class" afterPath="$PROJECT_DIR$/target/classes/application/user/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/application/AbstractControllerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/application/AbstractControllerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerMocksTest.class" afterPath="$PROJECT_DIR$/target/test-classes/application/user/UserControllerMocksTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gs-accessing-data-jpa.iml" afterPath="$PROJECT_DIR$/gs-accessing-data-jpa.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/Application.java" afterPath="$PROJECT_DIR$/src/main/java/application/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/user/PaceUser.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/PaceUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java" afterPath="$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerMocksTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerMocksTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserControllerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserRepositoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-application.user.UserRepositoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerMocksTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerMocksTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserControllerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/application.user.UserRepositoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/application.user.UserRepositoryTest.txt" />
     </list>
     <ignored path="BackPaceV2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +55,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
+            <state relative-caret-position="138">
+              <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,12 +64,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrudRepository.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <file leaf-file-name="UserControllerMocksTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,21 +79,65 @@
       <file leaf-file-name="AbstractControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="509">
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="e#2815#2816#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserControllerMocksTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java">
+      <file leaf-file-name="HttpStatus.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="-178">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IOException.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/io/IOException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Throwable.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="632" column="16" selection-start-line="632" selection-start-column="16" selection-end-line="632" selection-end-column="16" />
+              <folding>
+                <element signature="e#26222#26223#0" expanded="true" />
+                <element signature="e#26265#26266#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,38 +145,13 @@
       <file leaf-file-name="PaceUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/application/user/PaceUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1226#1227#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-              <folding>
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserControllerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1367#1368#0" expanded="true" />
+                <element signature="e#1413#1414#0" expanded="true" />
+                <element signature="e#1451#1452#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,9 +201,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/examples/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/examples/CustomerRestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/examples/CustomerRestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/examples/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/user/UserServiceBean.java" />
         <option value="$PROJECT_DIR$/src/test/java/AbstractTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/user/AbstractTest.java" />
@@ -228,8 +212,10 @@
         <option value="$PROJECT_DIR$/src/test/java/application/user/AbstractControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/user/PaceUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/user/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/Application.java" />
         <option value="$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/user/UserController.java" />
       </list>
     </option>
   </component>
@@ -253,23 +239,13 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="BackPace" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-    </treeState>
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1920" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="width" value="1920" />
+    <option name="height" value="1173" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -780,7 +756,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerMocksTest.testGetPaceUsers">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="false" name="UserControllerTest.user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -846,6 +822,58 @@
       <option name="PACKAGE_NAME" value="application.user" />
       <option name="MAIN_CLASS_NAME" value="application.user.UserControllerMocksTest" />
       <option name="METHOD_NAME" value="testGetPaceUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserControllerMocksTest.testCreatePaceUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="application.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="gs-accessing-data-jpa" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="application.user" />
+      <option name="MAIN_CLASS_NAME" value="application.user.UserControllerMocksTest" />
+      <option name="METHOD_NAME" value="testCreatePaceUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserControllerMocksTest.testUpdateGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="application.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="gs-accessing-data-jpa" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="application.user" />
+      <option name="MAIN_CLASS_NAME" value="application.user.UserControllerMocksTest" />
+      <option name="METHOD_NAME" value="testUpdateGreeting" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1289,17 +1317,21 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.UserControllerTest.user" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest.testFindAll" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testGetPaceUsers" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testCreatePaceUser" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testUpdateGreeting" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testGetPaceUsers" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest.testFindAll" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserControllerTest.user" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testUpdateGreeting" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testCreatePaceUser" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserControllerMocksTest.testGetPaceUsers" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserRepositoryTest.testFindAll" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserControllerTest.user" />
       </list>
     </recent_temporary>
   </component>
@@ -1323,7 +1355,7 @@
       <workItem from="1461337147491" duration="5078000" />
       <workItem from="1461513553371" duration="14783000" />
       <workItem from="1461854744876" duration="9635000" />
-      <workItem from="1462276518282" duration="7043000" />
+      <workItem from="1462276518282" duration="21916000" />
     </task>
     <task id="LOCAL-00001" summary="Checkpoint: Working on backend part of Facebook authentication. Added RestController for PaceUser.">
       <created>1461523293397</created>
@@ -1336,26 +1368,26 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="UserControllerMocksTest_testCreatePaceUser - 2016.05.04 at 12h 51m 58s.xml">
+      <configuration name="UserControllerMocksTest.testCreatePaceUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerMocksTest_testCreatePaceUser - 2016.05.04 at 12h 55m 57s.xml">
+      <configuration name="UserControllerMocksTest.testCreatePaceUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerMocksTest_testCreatePaceUser - 2016.05.04 at 13h 14m 59s.xml">
+      <configuration name="UserControllerMocksTest.testCreatePaceUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserControllerMocksTest_testCreatePaceUser - 2016.05.04 at 13h 21m 07s.xml">
+      <configuration name="UserControllerMocksTest.testCreatePaceUser" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="UserControllerMocksTest_testGetPaceUsers - 2016.05.03 at 17h 51m 35s.xml">
       <configuration name="UserControllerMocksTest.testGetPaceUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_user - 2016.05.01 at 23h 14m 59s.xml">
-      <configuration name="UserControllerTest.user" configurationId="JUnit" />
+    <history-entry file="UserControllerMocksTest_testUpdateGreeting - 2016.05.05 at 22h 02m 20s.xml">
+      <configuration name="UserControllerMocksTest.testUpdateGreeting" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserControllerTest_user - 2016.05.01 at 23h 15m 46s.xml">
-      <configuration name="UserControllerTest.user" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserControllerTest_user - 2016.05.01 at 23h 16m 22s.xml">
-      <configuration name="UserControllerTest.user" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_testFindAll - 2016.05.02 at 21h 40m 01s.xml">
-      <configuration name="UserRepositoryTest.testFindAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_testFindAll - 2016.05.02 at 21h 41m 45s.xml">
-      <configuration name="UserRepositoryTest.testFindAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserRepositoryTest_testFindAll - 2016.05.02 at 21h 54m 55s.xml">
-      <configuration name="UserRepositoryTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="UserControllerMocksTest_testUpdateGreeting - 2016.05.05 at 22h 23m 05s.xml">
+      <configuration name="UserControllerMocksTest.testUpdateGreeting" configurationId="JUnit" />
     </history-entry>
     <history-entry file="UserRepositoryTest_testFindAll - 2016.05.02 at 21h 55m 37s.xml">
       <configuration name="UserRepositoryTest.testFindAll" configurationId="JUnit" />
@@ -1368,33 +1400,33 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52485000" />
+    <option name="totallyTimeSpent" value="67358000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="-1920" y="23" width="1920" height="1173" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2584814" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25825346" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35829663" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.426457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27625203" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18210863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37372804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1420,7 +1452,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/application/user/UserController.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1429,16 +1469,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="81" column="69" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserServiceBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1484,8 +1514,8 @@
         <state relative-caret-position="90">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1548,8 +1578,8 @@
         <state relative-caret-position="169">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1558,6 +1588,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="16" column="67" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1629,6 +1660,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,6 +1746,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1730,13 +1763,6 @@
         <state relative-caret-position="405">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1779,16 +1805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/AbstractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserServiceBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1807,14 +1823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1823,51 +1831,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/user/PaceUser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/application/AbstractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+        <state relative-caret-position="127">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/user/PaceUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1413#1414#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/application/AbstractControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
+        <state relative-caret-position="138">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="632" column="16" selection-start-line="632" selection-start-column="16" selection-end-line="632" selection-end-column="16" />
+          <folding>
+            <element signature="e#26222#26223#0" expanded="true" />
+            <element signature="e#26265#26266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/io/IOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1876,20 +1951,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/user/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="303">
+          <caret line="47" column="67" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
           <folding>
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/application/user/UserControllerMocksTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>

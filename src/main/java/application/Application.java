@@ -76,14 +76,6 @@ public class Application {
                 log.info(paceUser.toString());
             }
             log.info("");
-
-            // fetch users by facebookId
-            log.info("PaceUser found with findByFacebookId('1273703759309879'):");
-            log.info("--------------------------------------------");
-            for (PaceUser paceUser : repository.findByFacebookId("1273703759309879")) {
-                log.info(paceUser.toString());
-            }
-            log.info("");
         };
     }
 
@@ -93,7 +85,7 @@ public class Application {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/*");
+                registry.addMapping("/api/*");
             }
         };
     }

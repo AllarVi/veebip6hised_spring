@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="application.user.UserControllerMocksTest" time="0.383" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="application.user.UserControllerMocksTest" time="0.785" tests="3" errors="0" skipped="0" failures="1">
   <properties>
     <property name="idea.version" value="2016.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -13,7 +13,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
+    <property name="idea.launcher.port" value="7532"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -64,5 +64,24 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testGetPaceUsers" classname="application.user.UserControllerMocksTest" time="0.383"/>
+  <testcase name="testGetPaceUsers" classname="application.user.UserControllerMocksTest" time="0.663"/>
+  <testcase name="testUpdateGreeting" classname="application.user.UserControllerMocksTest" time="0.085">
+    <failure message="failure - expected HTTP status 200 expected:&lt;200&gt; but was:&lt;201&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: failure - expected HTTP status 200 expected:<200> but was:<201>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at application.user.UserControllerMocksTest.testUpdateGreeting(UserControllerMocksTest.java:202)
+]]></failure>
+    <system-out><![CDATA[2016-05-05 22:11:58.886  INFO 15469 --- [           main] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@530612ba testClass = UserControllerMocksTest, testInstance = application.user.UserControllerMocksTest@3d3930fe, testMethod = testUpdateGreeting@UserControllerMocksTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2a40cd94 testClass = UserControllerMocksTest, locations = '{}', classes = '{class application.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@5dfd31f4]; rollback [true]
+2016-05-05 22:11:58.891  INFO 15469 --- [           main] ilder$StaticRequestMappingHandlerMapping : Mapped "{[/api/user]}" onto public org.springframework.http.ResponseEntity<application.user.PaceUser> application.user.UserController.getUser(java.lang.String)
+2016-05-05 22:11:58.893  INFO 15469 --- [           main] ilder$StaticRequestMappingHandlerMapping : Mapped "{[/api/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<application.user.PaceUser> application.user.UserController.saveNewPaceUser(java.lang.String)
+2016-05-05 22:11:58.894  INFO 15469 --- [           main] ilder$StaticRequestMappingHandlerMapping : Mapped "{[/api/users]}" onto public java.lang.Iterable<application.user.PaceUser> application.user.UserController.users()
+2016-05-05 22:11:58.905  INFO 15469 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4c65d8e3
+2016-05-05 22:11:58.911  INFO 15469 --- [           main] o.s.mock.web.MockServletContext          : Initializing Spring FrameworkServlet ''
+2016-05-05 22:11:58.911  INFO 15469 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-05-05 22:11:58.911  INFO 15469 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 0 ms
+2016-05-05 22:11:58.964  INFO 15469 --- [           main] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test context [DefaultTestContext@530612ba testClass = UserControllerMocksTest, testInstance = application.user.UserControllerMocksTest@3d3930fe, testMethod = testUpdateGreeting@UserControllerMocksTest, testException = java.lang.AssertionError: failure - expected HTTP status 200 expected:<200> but was:<201>, mergedContextConfiguration = [WebMergedContextConfiguration@2a40cd94 testClass = UserControllerMocksTest, locations = '{}', classes = '{class application.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]].
+]]></system-out>
+  </testcase>
+  <testcase name="testCreatePaceUser" classname="application.user.UserControllerMocksTest" time="0.037"/>
 </testsuite>
