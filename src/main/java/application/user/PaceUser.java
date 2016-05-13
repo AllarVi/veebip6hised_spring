@@ -20,6 +20,8 @@ public class PaceUser {
 
     private String picture;
 
+    private String accessToken;
+
     protected PaceUser() {
     }
 
@@ -71,6 +73,14 @@ public class PaceUser {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
     }
 }
 

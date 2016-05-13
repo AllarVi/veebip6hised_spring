@@ -76,6 +76,7 @@ public class UserControllerMocksTest extends AbstractControllerTest {
         paceUserAuthSuccess.setName("William Wallace");
         paceUserAuthSuccess.setFacebookId("123451234512345");
         paceUserAuthSuccess.setAuthResponse("success");
+        paceUserAuthSuccess.setAccessToken("accessToken");
         return paceUserAuthSuccess;
     }
 
