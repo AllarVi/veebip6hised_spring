@@ -13,6 +13,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.mockito.Mockito.*;
 
@@ -36,7 +37,7 @@ public class UserControllerMocksTest extends AbstractControllerTest {
     public void testGetPaceUsers() throws Exception {
 
         // Create some test data
-        Iterable<PaceUser> entityListStubData = getEntityListStubData();
+        List<PaceUser> entityListStubData = getEntityListStubData();
 
         // Stub the UserRepository.findAll method return value
         when(userRepository.findAll()).thenReturn(entityListStubData);
@@ -58,17 +59,15 @@ public class UserControllerMocksTest extends AbstractControllerTest {
         Assert.assertTrue("failure - expected HTTP response body to have a value", content.trim().length() > 0);
     }
 
-    private Iterable<PaceUser> getEntityListStubData() {
+    private List<PaceUser> getEntityListStubData() {
 
         // TODO: email: profileInfo.email,
-        return () -> {
-            PaceUser paceUserAuthSuccess = getPaceUserAuthSuccess();
+        PaceUser paceUserAuthSuccess = getPaceUserAuthSuccess();
 
-            ArrayList<PaceUser> entityList = new ArrayList<>();
-            entityList.add(paceUserAuthSuccess);
+        ArrayList<PaceUser> entityList = new ArrayList<>();
+        entityList.add(paceUserAuthSuccess);
 
-            return entityList.iterator();
-        };
+        return entityList;
     }
 
     private PaceUser getPaceUserAuthSuccess() {
@@ -76,7 +75,8 @@ public class UserControllerMocksTest extends AbstractControllerTest {
         paceUserAuthSuccess.setName("William Wallace");
         paceUserAuthSuccess.setFacebookId("123451234512345");
         paceUserAuthSuccess.setAuthResponse("success");
-        paceUserAuthSuccess.setAccessToken("accessToken");
+        paceUserAuthSuccess.setAccessToken
+                ("EAAD08lC2fhMBAJndhmi8SZCDoFrZAPKBjVZAjYdOjdx9n39StxZAtBtuLKUVEzq6HHTVHZC3B6ZCGymj2iQbLj4PIPNsbkgA7mZAxoFKejCFIuegh6da8keBarMj5yMFCQsS7EiqeZB4oY2nycUl4ZAhx6iGZAPCCNevhdDWhTM5uK0FJspaSNSm8sEeDODaM01SAZD");
         return paceUserAuthSuccess;
     }
 

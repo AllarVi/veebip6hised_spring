@@ -77,10 +77,6 @@ public class UserController extends BaseController {
         return userRepository.findAll();
     }
 
-    private PaceUser getPaceUser(@RequestParam(value = "facebookId") String facebookId) {
-        return userRepository.findByFacebookId(facebookId);
-    }
-
     private <T> T mapFromJson(String json, Class<T> clazz) throws JsonParseException, JsonMappingException,
             IOException {
         ObjectMapper mapper = new ObjectMapper();

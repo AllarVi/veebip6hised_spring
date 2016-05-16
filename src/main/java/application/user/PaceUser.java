@@ -1,12 +1,13 @@
 package application.user;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import application.team.ShortTeamView;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
 @Entity
-public class PaceUser {
+public class PaceUser implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,7 +23,10 @@ public class PaceUser {
 
     private String accessToken;
 
-    protected PaceUser() {
+    @ElementCollection
+    private List<ShortTeamView> shortTeamViewMap;
+
+    public PaceUser() {
     }
 
     public PaceUser(String name, String facebookId) {
@@ -81,6 +85,14 @@ public class PaceUser {
 
     public void setAccessToken(String accessToken) {
         this.accessToken = accessToken;
+    }
+
+    public List<ShortTeamView> getShortTeamViewMap() {
+        return shortTeamViewMap;
+    }
+
+    public void setShortTeamViewMap(List<ShortTeamView> shortTeamViewMap) {
+        this.shortTeamViewMap = shortTeamViewMap;
     }
 }
 

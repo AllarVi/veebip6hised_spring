@@ -9,3 +9,7 @@ spring:
     resources:
         chain:
             enabled: true
+    social:
+        facebook:
+            app-id: 269321573400083
+            app-secret: 18f4b0c8f3bf178842f92f73b2fc12a4
