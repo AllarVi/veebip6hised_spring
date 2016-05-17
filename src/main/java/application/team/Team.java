@@ -28,4 +28,12 @@ public abstract class Team implements Serializable {
     public void setTeamName(String teamName) {
         this.teamName = teamName;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

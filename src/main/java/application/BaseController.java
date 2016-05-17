@@ -2,12 +2,17 @@ package application;
 
 import application.user.PaceUser;
 import application.user.UserRepository;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.Connection;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.io.IOException;
 
 /**
  * Created by allarviinamae on 03/05/16.
@@ -40,5 +45,11 @@ public class BaseController {
         }
 
         return null;
+    }
+
+    protected <T> T mapFromJson(String json, Class<T> clazz) throws JsonParseException, JsonMappingException,
+            IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(json, clazz);
     }
 }

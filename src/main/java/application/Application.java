@@ -68,7 +68,7 @@ public class Application {
 
 //            Add shortTeamView to user
             List<ShortTeamView> shortTeamViewList = new ArrayList<>();
-            shortTeamViewList.add(shortTeamViewKossuryhm);
+//            shortTeamViewList.add(shortTeamViewKossuryhm);
             shortTeamViewList.add(shortTeamViewSaltopoisid);
 
             paceUserAllar.setShortTeamViewMap(shortTeamViewList);
@@ -123,6 +123,7 @@ public class Application {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/*");
+                registry.addMapping("/api/*/*");
             }
         };
     }

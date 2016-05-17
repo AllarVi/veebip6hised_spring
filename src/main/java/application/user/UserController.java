@@ -1,9 +1,6 @@
 package application.user;
 
 import application.BaseController;
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +19,7 @@ public class UserController extends BaseController {
     @Autowired
     UserRepository userRepository;
 
-    @RequestMapping(value = "/api/user")
+    @RequestMapping(value = "/api/user", method = RequestMethod.GET)
     public ResponseEntity<PaceUser> getUser(@RequestParam(value = "facebookId", required = false) String facebookId) {
         if (facebookId != null) {
             return new ResponseEntity<>(getPaceUser(facebookId), HttpStatus.OK);
@@ -75,12 +72,6 @@ public class UserController extends BaseController {
     @RequestMapping("/api/users")
     public Iterable<PaceUser> users() {
         return userRepository.findAll();
-    }
-
-    private <T> T mapFromJson(String json, Class<T> clazz) throws JsonParseException, JsonMappingException,
-            IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(json, clazz);
     }
 
 }
