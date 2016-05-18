@@ -24,7 +24,7 @@ public class PaceUser implements Serializable {
     private String accessToken;
 
     @ElementCollection
-    private List<ShortTeamView> shortTeamViewMap;
+    private List<ShortTeamView> shortTeamViewList;
 
     public PaceUser() {
     }
@@ -87,12 +87,12 @@ public class PaceUser implements Serializable {
         this.accessToken = accessToken;
     }
 
-    public List<ShortTeamView> getShortTeamViewMap() {
-        return shortTeamViewMap;
+    public List<ShortTeamView> getShortTeamViewList() {
+        return shortTeamViewList;
     }
 
-    public void setShortTeamViewMap(List<ShortTeamView> shortTeamViewMap) {
-        this.shortTeamViewMap = shortTeamViewMap;
+    public void setShortTeamViewList(List<ShortTeamView> shortTeamViewList) {
+        this.shortTeamViewList = shortTeamViewList;
     }
 }
 

@@ -16,6 +16,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,8 @@ import java.util.List;
  */
 @SpringBootApplication
 public class Application {
+
+    public static String ROOT = "upload-dir";
 
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
@@ -38,6 +41,12 @@ public class Application {
     public CommandLineRunner user(UserRepository userRepository, ShortTableRowRepository shortTableRowRepository,
                                   ShortTeamViewRepository shortTeamViewRepository) {
         return (args) -> {
+            boolean isDirCreated = new File(ROOT).mkdir();
+
+            if (isDirCreated) {
+                System.out.println("Directory created!");
+            }
+
             PaceUser paceUserAllar = new PaceUser("Allar", "1273703759309879");
             paceUserAllar.setAccessToken
                     ("EAAD08lC2fhMBAIWW7X6j85X0s8IREqlmaXlV47g5NZBOsk22L616ooPDtmUCD7Rup7vVkmKAFP5k5y5zNbf0ZBZB0XGU2fbvaUx7uUxLfY3lStaOyCoo3SiVn9kNGTW5NIon6JC2BNspoLex6NfCBZBkgEZCAyfn0JbICsgpuLu0FTO2zcEsiULORo2nnZBLMZD");
@@ -71,7 +80,7 @@ public class Application {
 //            shortTeamViewList.add(shortTeamViewKossuryhm);
             shortTeamViewList.add(shortTeamViewSaltopoisid);
 
-            paceUserAllar.setShortTeamViewMap(shortTeamViewList);
+            paceUserAllar.setShortTeamViewList(shortTeamViewList);
 
 //            Save user to database
             userRepository.save(paceUserAllar);

@@ -38,29 +38,35 @@ public class DashboardController extends BaseController {
         Connection<Facebook> connection = getFacebookConnection(token);
 
         if (connection == null) {
-            return new ResponseEntity<>(new PaceUser().getShortTeamViewMap(), HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(new PaceUser().getShortTeamViewList(), HttpStatus.UNAUTHORIZED);
         }
 
         if (teamView.equals("short")) {
             PaceUser paceUser = getPaceUser(facebookId);
 
-            return new ResponseEntity<>(paceUser.getShortTeamViewMap(), HttpStatus.OK);
+            return new ResponseEntity<>(paceUser.getShortTeamViewList(), HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(value = "/api/dashboard/join_group")
-    public ResponseEntity<Object> getGroups(@RequestParam(value = "groups") String groups, @RequestParam(value =
-            "token") String token) {
+    public ResponseEntity<Object> getGroups(@RequestParam(value = "facebookId") String facebookId, @RequestParam
+            (value = "token") String token, @RequestParam(value = "groups") String groups) {
 
         Connection<Facebook> connection = getFacebookConnection(token);
 
         if (connection == null) {
-            return new ResponseEntity<>(new PaceUser().getShortTeamViewMap(), HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(new PaceUser().getShortTeamViewList(), HttpStatus.UNAUTHORIZED);
         }
 
         if (groups.equals("all")) {
             List<ShortTeamView> teams = shortTeamViewRepository.findAll();
+
+            PaceUser paceUser = userRepository.findByFacebookId(facebookId);
+            List<ShortTeamView> userTeams = paceUser.getShortTeamViewList();
+
+//            Only show user teams he/she is not connected to yet
+            teams.removeAll(userTeams);
 
             return new ResponseEntity<>(teams, HttpStatus.OK);
         }
@@ -68,15 +74,13 @@ public class DashboardController extends BaseController {
     }
 
     @RequestMapping(value = "/api/dashboard/join_group", method = RequestMethod.POST)
-    public ResponseEntity<Object> joinTeam(@RequestParam(value = "facebookId") String facebookId, @RequestParam(value =
-            "token")
-            String token, @RequestBody String
-            groupData) {
+    public ResponseEntity<Object> joinTeam(@RequestParam(value = "facebookId") String facebookId, @RequestParam(value
+            = "token") String token, @RequestBody String groupData) {
 
         Connection<Facebook> connection = getFacebookConnection(token);
 
         if (connection == null) {
-            return new ResponseEntity<>(new PaceUser().getShortTeamViewMap(), HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(new PaceUser().getShortTeamViewList(), HttpStatus.UNAUTHORIZED);
         }
 
         try {
@@ -86,11 +90,11 @@ public class DashboardController extends BaseController {
 
             PaceUser paceUser = userRepository.findByFacebookId(facebookId);
 
-            List<ShortTeamView> shortTeamViews = paceUser.getShortTeamViewMap();
+            List<ShortTeamView> shortTeamViews = paceUser.getShortTeamViewList();
 
             shortTeamViews.add(shortTeamView);
 
-            paceUser.setShortTeamViewMap(shortTeamViews);
+            paceUser.setShortTeamViewList(shortTeamViews);
 
             userRepository.save(paceUser);
 
