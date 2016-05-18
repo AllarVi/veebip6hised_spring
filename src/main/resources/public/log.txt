@@ -1,0 +1,128 @@
+2016-05-12 11:34:56.511  INFO 2731 --- [main] m.g.m.r.Lab2GroovyApplication            : Starting Lab2GroovyApplication on rannar-900X3F with PID 2731 (/home/rannar/IdeaProjects/Lab2Groovy/target/classes started by rannar in /home/rannar/IdeaProjects/Lab2Groovy)
+2016-05-12 11:34:56.520  INFO 2731 --- [main] m.g.m.r.Lab2GroovyApplication            : No active profile set, falling back to default profiles: default
+2016-05-12 11:34:56.707  INFO 2731 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32095b09: startup date [Thu May 12 11:34:56 EEST 2016]; root of context hierarchy
+2016-05-12 11:35:00.088  INFO 2731 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a4100baf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-05-12 11:35:00.951  INFO 2731 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-05-12 11:35:00.990  INFO 2731 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-05-12 11:35:00.993  INFO 2731 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2016-05-12 11:35:01.748  INFO 2731 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2016-05-12 11:35:01.765  INFO 2731 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-05-12 11:35:01.766  INFO 2731 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5068 ms
+2016-05-12 11:35:02.727  INFO 2731 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-05-12 11:35:02.736  INFO 2731 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-05-12 11:35:02.738  INFO 2731 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-05-12 11:35:02.741  INFO 2731 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-05-12 11:35:02.741  INFO 2731 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-05-12 11:35:03.432  INFO 2731 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-05-12 11:35:03.479  INFO 2731 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-05-12 11:35:03.689  INFO 2731 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-05-12 11:35:03.701  INFO 2731 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-05-12 11:35:03.709  INFO 2731 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-05-12 11:35:04.127  INFO 2731 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-05-12 11:35:04.856  INFO 2731 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2016-05-12 11:35:04.880  INFO 2731 --- [main] o.h.e.jdbc.internal.LobCreatorBuilder    : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2016-05-12 11:35:05.041  INFO 2731 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-05-12 11:35:05.709  INFO 2731 --- [main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000229: Running schema validator
+2016-05-12 11:35:05.710  INFO 2731 --- [main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000102: Fetching database metadata
+2016-05-12 11:35:05.732  INFO 2731 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: public.movies
+2016-05-12 11:35:05.733  INFO 2731 --- [main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [genre, name, rating, description, id]
+2016-05-12 11:35:06.436  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/movieservice],methods=[GET],produces=[application/json]}" onto public java.lang.String main.groovy.me.rannarallorg.controller.MovieServiceController.getMovieJson(java.lang.String)
+2016-05-12 11:35:06.440  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/s],methods=[GET]}" onto public java.lang.String main.groovy.me.rannarallorg.controller.MovieController.getMovies(java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2016-05-12 11:35:06.441  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/s],methods=[POST]}" onto public java.lang.String main.groovy.me.rannarallorg.controller.MovieController.saveMovie(java.lang.String,main.groovy.me.rannarallorg.movie.Movie,org.springframework.validation.BindingResult,java.util.Map<java.lang.String, java.lang.Object>)
+2016-05-12 11:35:06.459  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-05-12 11:35:06.461  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-05-12 11:35:06.533  INFO 2731 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2016-05-12 11:35:06.627  INFO 2731 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32095b09: startup date [Thu May 12 11:34:56 EEST 2016]; root of context hierarchy
+2016-05-12 11:35:07.772  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.774  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.776  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-05-12 11:35:07.778  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.783  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.785  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.787  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-05-12 11:35:07.788  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.790  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-05-12 11:35:07.791  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.792  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2016-05-12 11:35:07.793  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:07.795  INFO 2731 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-05-12 11:35:08.440  INFO 2731 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-05-12 11:35:08.482  INFO 2731 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-05-12 11:35:08.775  INFO 2731 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-05-12 11:35:08.795  INFO 2731 --- [main] m.g.m.r.Lab2GroovyApplication            : Started Lab2GroovyApplication in 13.059 seconds (JVM running for 26.82)
+2016-05-12 11:35:22.328  INFO 2731 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-05-12 11:35:22.329  INFO 2731 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-05-12 11:35:22.365  INFO 2731 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2016-05-12 11:35:22.623  INFO 2731 --- [http-nio-8080-exec-1] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:35:44.692  INFO 2731 --- [http-nio-8080-exec-2] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:35:44.749 ERROR 2731 --- [http-nio-8080-exec-2] m.g.m.r.controller.MovieController       : Movie with id 8 was not found
+2016-05-12 11:35:44.796 ERROR 2731 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E:(pos 0): Property or field 'timestamp' cannot be found on object of type 'java.util.HashMap' - maybe not public?] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1008E:(pos 0): Property or field 'timestamp' cannot be found on object of type 'java.util.HashMap' - maybe not public?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:224) ~[spring-expression-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94) ~[spring-expression-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:81) ~[spring-expression-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120) ~[spring-expression-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:242) ~[spring-expression-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$ExpressionResolver.resolvePlaceholder(ErrorMvcAutoConfiguration.java:245) ~[spring-boot-autoconfigure-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.boot.autoconfigure.web.NonRecursivePropertyPlaceholderHelper$NonRecursivePlaceholderResolver.resolvePlaceholder(NonRecursivePropertyPlaceholderHelper.java:56) ~[spring-boot-autoconfigure-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:147) ~[spring-core-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.boot.autoconfigure.web.NonRecursivePropertyPlaceholderHelper.parseStringValue(NonRecursivePropertyPlaceholderHelper.java:38) ~[spring-boot-autoconfigure-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$SpelView.render(ErrorMvcAutoConfiguration.java:194) ~[spring-boot-autoconfigure-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1243) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1027) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:968) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:859) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:844) ~[spring-webmvc-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:292) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration$ApplicationContextHeaderFilter.doFilterInternal(EndpointWebMvcAutoConfiguration.java:237) ~[spring-boot-actuator-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:112) ~[spring-boot-actuator-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103) ~[spring-boot-actuator-1.3.3.RELEASE.jar:1.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.5.RELEASE.jar:4.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_91]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_91]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.32.jar:8.0.32]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_91]
+
+2016-05-12 11:36:00.753  INFO 2731 --- [http-nio-8080-exec-3] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:40:51.392  INFO 2731 --- [http-nio-8080-exec-9] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:40:51.786  INFO 2731 --- [http-nio-8080-exec-10] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:42:12.605  INFO 2731 --- [http-nio-8080-exec-1] m.g.m.r.controller.MovieController       : Request recieved
+2016-05-12 11:52:36.194  INFO 2731 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@32095b09: startup date [Thu May 12 11:34:56 EEST 2016]; root of context hierarchy
+2016-05-12 11:52:36.227  INFO 2731 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-05-12 11:52:36.268  INFO 2731 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-05-12 11:52:36.272  INFO 2731 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
