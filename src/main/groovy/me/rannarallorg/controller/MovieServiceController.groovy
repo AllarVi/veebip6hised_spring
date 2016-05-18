@@ -1,7 +1,7 @@
 package main.groovy.me.rannarallorg.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import main.groovy.me.rannarallorg.dao.MovieDao
+import main.groovy.me.rannarallorg.dao.MovieRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController
 class MovieServiceController {
 
     @Autowired
-    MovieDao movieDao
+    MovieRepository movieRepository
 
     @Autowired
     ObjectMapper objectMapper
 
-    @RequestMapping(value="/movieservice", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/movieservice", method = RequestMethod.GET, produces = "application/json")
     String getMovieJson(@RequestParam("id") String id) {
-        return objectMapper.writeValueAsString(movieDao.getById(id as int))
+        return objectMapper.writeValueAsString(movieRepository.findOne(id as Integer))
     }
 }

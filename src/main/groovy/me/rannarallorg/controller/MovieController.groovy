@@ -1,6 +1,6 @@
 package main.groovy.me.rannarallorg.controller
 
-import main.groovy.me.rannarallorg.dao.MovieDao
+import main.groovy.me.rannarallorg.dao.MovieRepository
 import main.groovy.me.rannarallorg.movie.Movie
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -18,18 +18,18 @@ import javax.validation.Valid
 class MovieController {
 
     @Autowired
-    MovieDao movieDao
+    MovieRepository movieRepository
 
     private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
 
-    @RequestMapping(value="/s", method = RequestMethod.GET)
+    @RequestMapping(value = "/s", method = RequestMethod.GET)
     String getMovies(Map<String, Object> model,
                      @RequestParam(value = "id", required = false) String id) {
 
         logger.info("Request received")
 
         if (id != null) {
-            Movie movie = movieDao.getById(id as int)
+            Movie movie = movieRepository.findOne(id as Integer);
 
             if (movie == null) {
                 logger.error("Movie with id ${id} was not found")
@@ -38,11 +38,11 @@ class MovieController {
             model.put("movie", movie);
         }
 
-        model.put("movies", movieDao.getAll())
+        model.put("movies", movieRepository.findAll())
         "movies"
     }
 
-    @RequestMapping(value="/s", method = RequestMethod.POST)
+    @RequestMapping(value = "/s", method = RequestMethod.POST)
     String saveMovie(@RequestParam("action") String action,
                      @Valid @ModelAttribute("movie") Movie movie,
                      BindingResult bindingResult,
@@ -57,10 +57,10 @@ class MovieController {
         }
 
         if ("save".equals(action)) {
-            movieDao.update(movie)
+            movieRepository.save(movie)
         }
 
-        model.put("movies", movieDao.getAll())
+        model.put("movies", movieRepository.findAll())
         "redirect:/s"
     }
 }
