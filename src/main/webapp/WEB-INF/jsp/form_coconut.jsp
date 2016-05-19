@@ -10,8 +10,8 @@
         </div>
     </c:if>
 
-    <c:url var="post_url"  value="/s?action=save" />
-    <form:form action="${post_url}" modelAttribute="movie" method="post">
+    <c:url var="post_url" value="/s?action=save"/>
+    <form:form action="${post_url}" modelAttribute="coconut" method="post">
 
         <div class="form-group">
             <form:input path="id" type="text" id="id" class="form-control" readonly="true"></form:input>
@@ -29,12 +29,14 @@
         </div>
 
         <div class="form-group">
-            <form:input path="rating" type="number" id="movieRating" placeholder="Hinnang" class="form-control" min="0"></form:input>
+            <form:input path="rating" type="number" id="movieRating" placeholder="Hinnang" class="form-control"
+                        min="0"></form:input>
             <form:errors path="rating"><p class="error">Hinnang peab jääma vahemikku 0-5</p></form:errors>
         </div>
 
         <div class="form-group">
-            <form:textarea path="description" rows="3" id="movieDescription" placeholder="Kirjeldus" class="form-control"></form:textarea>
+            <form:textarea path="description" rows="3" id="movieDescription" placeholder="Kirjeldus"
+                           class="form-control"></form:textarea>
             <form:errors path="description"><p class="error">Kirjeldus ei tohi tühi olla</p></form:errors>
         </div>
 

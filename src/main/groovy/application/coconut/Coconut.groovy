@@ -1,4 +1,4 @@
-package main.groovy.me.rannarallorg.movie
+package main.groovy.application.coconut
 
 import org.hibernate.validator.constraints.NotBlank
 import org.hibernate.validator.constraints.Range
@@ -11,23 +11,23 @@ import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
 @Entity
-@Table(name = "movies")
-class Movie {
+@Table(name = "coconuts")
+class Coconut {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     int id;
 
     @Column(nullable = false)
-    @Size(min=1, max=30)
+    @Size(min = 1, max = 30)
     String name;
 
     @Column(nullable = false)
-    @Size(min=1, max=20)
+    @Size(min = 1, max = 20)
     String genre;
 
     @Column(nullable = false)
-    @Range(min=0l, max=5l)
+    @Range(min = 0l, max = 5l)
     @NotNull
     Integer rating;
 
@@ -35,4 +35,15 @@ class Movie {
     @NotBlank
     String description;
 
+
+    @Override
+    public String toString() {
+        return "Coconut{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", genre='" + genre + '\'' +
+                ", rating=" + rating +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

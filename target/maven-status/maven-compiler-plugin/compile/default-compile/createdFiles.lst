@@ -1,0 +1,6 @@
+main/groovy/application/controller/CoconutController.class
+main/groovy/application/controller/CoconutRestController.class
+main/groovy/application/configurations/WebMVCConfigurer.class
+main/groovy/application/Lab2GroovyApplication.class
+main/groovy/application/dao/CoconutRepository.class
+main/groovy/application/coconut/Coconut.class

@@ -1,4 +1,4 @@
-package main.groovy.me.rannarallorg.configurations
+package main.groovy.application.configurations
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -7,12 +7,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver
 
-/**
- * Created by rannar on 12.04.16.
- */
 @Configuration
 @EnableWebMvc
-class ApplicationWebMvcConfig extends WebMvcConfigurerAdapter{
+class WebMVCConfigurer extends WebMvcConfigurerAdapter {
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -21,9 +18,14 @@ class ApplicationWebMvcConfig extends WebMvcConfigurerAdapter{
 
     @Bean
     public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver resolver = handleViews()
+        return resolver;
+    }
+
+    private InternalResourceViewResolver handleViews() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/jsp/");
         resolver.setSuffix(".jsp");
-        return resolver;
+        resolver
     }
 }
