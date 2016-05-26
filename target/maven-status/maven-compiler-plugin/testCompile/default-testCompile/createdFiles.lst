@@ -1,5 +1,0 @@
-application/AbstractControllerTest.class
-application/user/UserControllerMocksTest.class
-application/user/UserRepositoryTest.class
-application/AbstractTest.class
-application/user/UserControllerTest.class
