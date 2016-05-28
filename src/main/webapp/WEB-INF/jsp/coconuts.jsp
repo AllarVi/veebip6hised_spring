@@ -16,6 +16,16 @@
         .form-container {
             display: none;
         }
+
+        .form-container-add-document {
+            display: none;
+        }
+
+        .log-in-form {
+            border: 1px solid #cacaca;
+            padding: 1rem;
+            border-radius: 3px;
+        }
     </style>
 
     <!-- Compressed CSS -->
@@ -80,6 +90,37 @@
 
         $(".form-container").show();
     }
+
+    //    Add document
+
+    function showAddDocument() {
+        $(".form-container-add-document").show();
+    }
+
+    $(".add-document").click(function () {
+        console.log("Add document button clicked");
+
+//        var coconutId = $(this).attr('id').split("-")[1];
+
+        <%--$.get("${pageContext.request.contextPath}/coconutservice?id=" + coconutId, function (data) {--%>
+        showAddDocument();
+//        }).fail(function () {
+//            alert("Viga!");
+//        });
+    });
+
+//    $("#addDocumentForm").submit(function (event) {
+//        event.preventDefault();
+//
+//        // get all the inputs into an array.
+//        var $inputs = $('#addDocumentForm :input');
+//
+//        var values = {};
+//        $inputs.each(function() {
+//            values[this.name] = $(this).val();
+//            console.log($(this).val());
+//        });
+//    });
 </script>
 
 <!-- Compressed JavaScript -->
