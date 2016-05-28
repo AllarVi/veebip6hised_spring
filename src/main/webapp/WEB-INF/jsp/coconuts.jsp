@@ -97,30 +97,40 @@
         $(".form-container-add-document").show();
     }
 
+    function initDocTypes(data) {
+        $.each(data, function () {
+            $('#docTypes').append(new Option(this.typeName, this.id));
+        });
+    }
+
+    var getDocTypes = function () {
+        $.get("${pageContext.request.contextPath}/documentservice/doctype", function (data) {
+            initDocTypes(data);
+        }).fail(function () {
+            console.log("Viga dokumendi tüüpide küsimisel!");
+        });
+    };
+
     $(".add-document").click(function () {
         console.log("Add document button clicked");
 
-//        var coconutId = $(this).attr('id').split("-")[1];
+        getDocTypes();
 
-        <%--$.get("${pageContext.request.contextPath}/coconutservice?id=" + coconutId, function (data) {--%>
         showAddDocument();
-//        }).fail(function () {
-//            alert("Viga!");
-//        });
     });
 
-//    $("#addDocumentForm").submit(function (event) {
-//        event.preventDefault();
-//
-//        // get all the inputs into an array.
-//        var $inputs = $('#addDocumentForm :input');
-//
-//        var values = {};
-//        $inputs.each(function() {
-//            values[this.name] = $(this).val();
-//            console.log($(this).val());
-//        });
-//    });
+    //    $("#addDocumentForm").submit(function (event) {
+    //        event.preventDefault();
+    //
+    //        // get all the inputs into an array.
+    //        var $inputs = $('#addDocumentForm :input');
+    //
+    //        var values = {};
+    //        $inputs.each(function() {
+    //            values[this.name] = $(this).val();
+    //            console.log($(this).val());
+    //        });
+    //    });
 </script>
 
 <!-- Compressed JavaScript -->

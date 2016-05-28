@@ -1,4 +1,4 @@
-package main.groovy.application.coconut;
+package main.groovy.application.model;
 
 import java.lang.*;
 import java.io.*;

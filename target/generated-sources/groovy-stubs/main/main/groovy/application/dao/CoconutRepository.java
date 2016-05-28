@@ -9,6 +9,6 @@ import groovy.util.*;
 
 public interface CoconutRepository
   extends
-    org.springframework.data.jpa.repository.JpaRepository<main.groovy.application.coconut.Coconut, java.lang.Integer> {
+    org.springframework.data.jpa.repository.JpaRepository<main.groovy.application.model.Coconut, java.lang.Integer> {
 ;
 }

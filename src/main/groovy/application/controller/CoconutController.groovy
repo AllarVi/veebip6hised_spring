@@ -1,7 +1,7 @@
 package main.groovy.application.controller
 
-import main.groovy.application.coconut.Coconut
-import main.groovy.application.coconut.Document
+import main.groovy.application.model.Coconut
+import main.groovy.application.model.Document
 import main.groovy.application.dao.CoconutRepository
 import main.groovy.application.dao.DocumentRepository
 import org.slf4j.Logger
@@ -45,7 +45,7 @@ class CoconutController {
                 logger.error("Kookost id-ga: ${id} ei leitud")
                 return VIEW_ERROR
             }
-            model.put("coconut", coconut);
+            model.put("model", coconut);
         }
 
         model.put("coconuts", coconutRepository.findAll())
@@ -64,15 +64,15 @@ class CoconutController {
 
     @RequestMapping(value = "/s", method = RequestMethod.POST)
     String updateCoconuts(@RequestParam("action") String action,
-                          @Valid @ModelAttribute("coconut") Coconut coconut,
+                          @Valid @ModelAttribute("model") Coconut coconut,
                           BindingResult bindingResult,
                           Map<String, Object> model) {
 
-        logger.info("Updating coconut...")
+        logger.info("Updating model...")
 
         if (bindingResult.hasErrors()) {
             logger.error("Errors!")
-            model.put("coconut", coconut)
+            model.put("model", coconut)
             return VIEW_COCONUTS
         }
 

@@ -1,4 +1,4 @@
-package main.groovy.application.coconut
+package main.groovy.application.model
 
 import org.hibernate.validator.constraints.NotBlank
 import org.hibernate.validator.constraints.Range

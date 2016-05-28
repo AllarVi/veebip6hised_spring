@@ -1,6 +1,6 @@
 package main.groovy.application.dao
 
-import main.groovy.application.coconut.Coconut
+import main.groovy.application.model.Coconut
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

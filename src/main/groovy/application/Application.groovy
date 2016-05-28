@@ -1,7 +1,9 @@
 package main.groovy.application
 
-import main.groovy.application.coconut.Coconut
 import main.groovy.application.dao.CoconutRepository
+import main.groovy.application.dao.DocTypeRepository
+import main.groovy.application.model.Coconut
+import main.groovy.application.model.DocType
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
@@ -23,12 +25,28 @@ class Application extends WebMvcAutoConfiguration {
      * We can do our initialization logic and testing here.
      */
     @Bean
-    public CommandLineRunner user(CoconutRepository coconutRepository) {
+    public CommandLineRunner user(CoconutRepository coconutRepository, DocTypeRepository docTypeRepository) {
         return new CommandLineRunner() {
             @Override
             void run(String... args) throws Exception {
 
+                initCoconutValues()
 
+                initDocTypeValues()
+
+                logCoconuts()
+            }
+
+            private void logCoconuts() {
+                log.info("Coconuts found with findAll():");
+                log.info("-------------------------------");
+                for (Coconut coconut : coconutRepository.findAll()) {
+                    log.info(coconut.toString());
+                }
+                log.info("");
+            }
+
+            private void initCoconutValues() {
                 Coconut coconut1 = new Coconut();
                 coconut1.setId(1);
                 coconut1.setName("Young");
@@ -53,14 +71,16 @@ class Application extends WebMvcAutoConfiguration {
                 coconutRepository.save(coconut1);
                 coconutRepository.save(coconut2);
                 coconutRepository.save(coconut3);
+            }
 
-                // fetch all coconuts
-                log.info("Coconuts found with findAll():");
-                log.info("-------------------------------");
-                for (Coconut coconut : coconutRepository.findAll()) {
-                    log.info(coconut.toString());
-                }
-                log.info("");
+            private void initDocTypeValues() {
+                DocType docType1 = new DocType("arve");
+                DocType docType2 = new DocType("finantsaruanne");
+                DocType docType3 = new DocType("tarneleping");
+
+                docTypeRepository.save(docType1);
+                docTypeRepository.save(docType2);
+                docTypeRepository.save(docType3);
             }
         };
     }

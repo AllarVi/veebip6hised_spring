@@ -114,6 +114,9 @@
                 <label>Filename
                     <form:input path="filename" type="text" placeholder="Filename"></form:input>
                 </label>
+                <label>Dokumendi tüüp:
+                    <select id="docTypes"></select>
+                </label>
                 <p><input type="submit" class="button expanded" value="Add document"></p>
             </div>
         </form:form>
