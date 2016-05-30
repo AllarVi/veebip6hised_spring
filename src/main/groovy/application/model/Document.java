@@ -23,7 +23,7 @@ public class Document {
     public Document() {
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 

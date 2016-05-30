@@ -1,9 +1,8 @@
 package main.groovy.application.controller
 
-import main.groovy.application.model.Coconut
-import main.groovy.application.model.Document
 import main.groovy.application.dao.CoconutRepository
 import main.groovy.application.dao.DocumentRepository
+import main.groovy.application.model.Document
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -39,32 +38,85 @@ class CoconutController {
         logger.info("getAllCoconuts() reached...")
 
         if (id != null) {
-            Coconut coconut = coconutRepository.findOne(id as Integer);
 
-            if (coconut == null) {
+            Document document = documentRepository.findOne(id as Integer);
+            logger.info("Found your document...")
+
+            if (document == null) {
                 logger.error("Kookost id-ga: ${id} ei leitud")
                 return VIEW_ERROR
             }
-            model.put("model", coconut);
+            model.put("model", document);
+
+//            Coconut coconut = coconutRepository.findOne(id as Integer);
+//
+//            if (coconut == null) {
+//                logger.error("Kookost id-ga: ${id} ei leitud")
+//                return VIEW_ERROR
+//            }
+//            model.put("model", coconut);
         }
 
         model.put("coconuts", coconutRepository.findAll())
+        model.put("documents", documentRepository.findAll())
 
         model.put("document", new Document());
 
         ArrayList<Document> documents = documentRepository.findAll();
         model.put("documents", documents);
 
-        for (Document document : documents) {
-            logger.info("Document: " + document)
+        for (Document d : documents) {
+            logger.info("Document: " + d)
         }
 
         return VIEW_COCONUTS
     }
 
+    @RequestMapping(value = "/delete")
+    String deleteDocument(@RequestParam(value = "id", required = false) String id) {
+
+        logger.info("getAllCoconuts() reached...")
+
+        if (id != null) {
+
+            Document document = documentRepository.findOne(id as Integer);
+            logger.info("Found your document...")
+
+            logger.info("Trying to delete...")
+            documentRepository.delete(document)
+            REDIRECT_COCONUTS
+
+        }
+
+        return "documents"
+    }
+
+//    @RequestMapping(value = "/s", method = RequestMethod.POST)
+//    String updateCoconuts(@RequestParam("action") String action,
+//                          @Valid @ModelAttribute("model") Coconut coconut,
+//                          BindingResult bindingResult,
+//                          Map<String, Object> model) {
+//
+//        logger.info("Updating model...")
+//
+//        if (bindingResult.hasErrors()) {
+//            logger.error("Errors!")
+//            model.put("model", coconut)
+//            return VIEW_COCONUTS
+//        }
+//
+//        if (ACTION_SAVE.equals(action)) {
+//            coconutRepository.save(coconut)
+//        }
+//
+//        model.put(VIEW_COCONUTS, coconutRepository.findAll())
+//
+//        REDIRECT_COCONUTS
+//    }
+
     @RequestMapping(value = "/s", method = RequestMethod.POST)
     String updateCoconuts(@RequestParam("action") String action,
-                          @Valid @ModelAttribute("model") Coconut coconut,
+                          @Valid @ModelAttribute("model") Document document,
                           BindingResult bindingResult,
                           Map<String, Object> model) {
 
@@ -72,15 +124,16 @@ class CoconutController {
 
         if (bindingResult.hasErrors()) {
             logger.error("Errors!")
-            model.put("model", coconut)
-            return VIEW_COCONUTS
+            model.put("model", document)
+            return "documents"
         }
 
         if (ACTION_SAVE.equals(action)) {
-            coconutRepository.save(coconut)
+            documentRepository.save(document)
         }
 
-        model.put(VIEW_COCONUTS, coconutRepository.findAll())
+        model.put("documents", documentRepository.findAll())
+
         REDIRECT_COCONUTS
     }
 

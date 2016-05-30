@@ -17,5 +17,5 @@ public  java.lang.Object invokeMethod(java.lang.String method, java.lang.Object 
 public  java.lang.Object getProperty(java.lang.String property) { return null;}
 public  void setProperty(java.lang.String property, java.lang.Object value) { }
 public static  void main(java.lang.String... args) { }
-@org.springframework.context.annotation.Bean() public  org.springframework.boot.CommandLineRunner user(main.groovy.application.dao.CoconutRepository coconutRepository, main.groovy.application.dao.DocTypeRepository docTypeRepository) { return (org.springframework.boot.CommandLineRunner)null;}
+@org.springframework.context.annotation.Bean() public  org.springframework.boot.CommandLineRunner user(main.groovy.application.dao.DocumentRepository documentRepository, main.groovy.application.dao.DocTypeRepository docTypeRepository) { return (org.springframework.boot.CommandLineRunner)null;}
 }

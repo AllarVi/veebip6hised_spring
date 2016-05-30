@@ -57,8 +57,9 @@
 <div>
 
     <c:choose>
-        <c:when test="${coconut != null}">
-            <jsp:include page="form_coconut.jsp"/>
+        <c:when test="${document == null}">
+            <%--<jsp:include page="form_coconut.jsp"/>--%>
+            <jsp:include page="form_document.jsp"/>
         </c:when>
         <c:otherwise>
             <jsp:include page="table_coconut.jsp"/>
@@ -118,6 +119,54 @@
 
         showAddDocument();
     });
+
+    //      Delete document
+
+    $(".delete-document").click(function () {
+        console.log("Delete document button clicked");
+
+        var documentId = $(this).attr('id').split("-")[1];;
+        console.log("Delete document button clicked id " + documentId);
+
+        $(this).closest('tr').remove();
+
+        $.get("${pageContext.request.contextPath}/delete?id=" + documentId, function (data) {
+            deleteDocument(data);
+        });
+
+        console.log("Delete document button clicked path " + "${pageContext.request.contextPath}/delete?id=" + documentId);
+
+    });
+
+    function deleteDocument(data) {
+        console.log("Deleting ..");
+        $("#id-value").text(data.id);
+
+    }
+
+    //      Edit document
+
+    $(".edit-document").click(function () {
+        console.log("Edit document button clicked");
+
+        var documentId = $(this).attr('id').split("-")[1];;
+        console.log("Edit document button clicked id " + documentId);
+
+        $.get("${pageContext.request.contextPath}/s?id=" + documentId, function (data) {
+            editDocument(data);
+        }).fail(function () {
+            alert("Viga!");
+        });
+
+        console.log("Edit document button clicked path " + "${pageContext.request.contextPath}/s?id=" + documentId);
+
+    });
+
+    function editDocument(data) {
+        console.log("Editing ..");
+        $("#id-value").text(data.id);
+
+    }
 
     //    $("#addDocumentForm").submit(function (event) {
     //        event.preventDefault();

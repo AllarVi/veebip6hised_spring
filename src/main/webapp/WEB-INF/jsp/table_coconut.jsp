@@ -4,36 +4,36 @@
 
 <div class="row">
     <table class="table table-striped coconut-table">
-        <thead>
-        <tr class="text-center">
-            <th></th>
-            <th>Id</th>
-            <th>Nimi</th>
-            <th>Kaal</th>
-            <th>Hinnang</th>
-            <th></th>
-            <th></th>
-        </tr>
-        </thead>
+        <%--<thead>--%>
+        <%--<tr class="text-center">--%>
+            <%--<th></th>--%>
+            <%--<th>Id</th>--%>
+            <%--<th>Nimi</th>--%>
+            <%--<th>Kaal</th>--%>
+            <%--<th>Hinnang</th>--%>
+            <%--<th></th>--%>
+            <%--<th></th>--%>
+        <%--</tr>--%>
+        <%--</thead>--%>
 
-        <tbody>
-        <c:forEach items="${requestScope.coconuts}" var="coconut">
-            <tr class="text-center">
-                <td><a>
-                    <button class="add-document tiny button" aria-hidden="true">Lisa
-                    </button>
-                </a></td>
-                <td><a href="?id=${coconut.id}">
-                    <button class="tiny button" aria-hidden="true">Muuda</button>
-                </a></td>
-                <td><c:out value="${coconut.id}"/></td>
-                <td><c:out value="${coconut.name}"/></td>
-                <td><c:out value="${coconut.weight}"/></td>
-                <td><c:out value="${coconut.rating}"/></td>
-                <td><a class="description-link tiny button" id="coconut-${coconut.id}">Kirjeldus</a></td>
-            </tr>
-        </c:forEach>
-        </tbody>
+        <%--<tbody>--%>
+        <%--<c:forEach items="${requestScope.coconuts}" var="coconut">--%>
+            <%--<tr class="text-center">--%>
+                <%--<td><a>--%>
+                    <%--<button class="add-document tiny button" aria-hidden="true">Lisa--%>
+                    <%--</button>--%>
+                <%--</a></td>--%>
+                <%--<td><a href="?id=${coconut.id}">--%>
+                    <%--<button class="tiny button" aria-hidden="true">Muuda</button>--%>
+                <%--</a></td>--%>
+                <%--<td><c:out value="${coconut.id}"/></td>--%>
+                <%--<td><c:out value="${coconut.name}"/></td>--%>
+                <%--<td><c:out value="${coconut.weight}"/></td>--%>
+                <%--<td><c:out value="${coconut.rating}"/></td>--%>
+                <%--<td><a class="description-link tiny button" id="coconut-${coconut.id}">Kirjeldus</a></td>--%>
+            <%--</tr>--%>
+        <%--</c:forEach>--%>
+        <%--</tbody>--%>
 
         <thead>
         <tr class="text-center">
@@ -55,11 +55,14 @@
                 <td><c:out value="${document.description}"/></td>
                 <td><c:out value="${document.type}"/></td>
                 <td><c:out value="${document.filename}"/></td>
+                <%--<td><a type="submit" action="edit" class="edit-document tiny button" id="document-${document.id}">--%>
+                    <%--Muuda--%>
+                <%--</a></td>--%>
                 <td><a href="?id=${document.id}">
                     <button class="tiny button" aria-hidden="true">Muuda</button>
                 </a></td>
-                <td><a href="?id=${document.id}">
-                    <button class="tiny button" aria-hidden="true">Kustuta</button>
+                <td><a type="submit" action="delete" class="delete-document tiny button" id="document-${document.id}">
+                    Kustuta
                 </a></td>
             </tr>
         </c:forEach>
@@ -102,20 +105,17 @@
         <form:form id="addDocumentForm" action="${pageContext.request.contextPath}/coconutservice/add"
                    modelAttribute="document" method="POST">
             <div class="row column log-in-form">
-                <label>Name
+                <label>Nimi
                     <form:input path="name" type="text" placeholder="Name"></form:input>
                 </label>
-                <label>Description
+                <label>Kirjeldus
                     <form:input path="description" type="text" placeholder="Description"></form:input>
                 </label>
-                <label>Type
-                    <form:input path="type" type="text" placeholder="Type"></form:input>
+                <label>Dokumendi tüüp
+                    <select path="type" id="docTypes"></select>
                 </label>
-                <label>Filename
+                <label>Failinimi
                     <form:input path="filename" type="text" placeholder="Filename"></form:input>
-                </label>
-                <label>Dokumendi tüüp:
-                    <select id="docTypes"></select>
                 </label>
                 <p><input type="submit" class="button expanded" value="Add document"></p>
             </div>

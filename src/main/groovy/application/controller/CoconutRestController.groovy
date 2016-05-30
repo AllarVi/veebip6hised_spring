@@ -29,6 +29,11 @@ class CoconutRestController {
         return coconutRepository.findOne(id as Integer)
     }
 
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    Document deleteDocument(@RequestParam("id") String id) {
+        return documentRepository.findOne(id as Integer)
+    }
+
     @RequestMapping(value = "/documentservice/doctype", method = RequestMethod.GET)
     ResponseEntity<Object> getDocTypes() {
         return new ResponseEntity<>(docTypeRepository.findAll(), HttpStatus.OK);

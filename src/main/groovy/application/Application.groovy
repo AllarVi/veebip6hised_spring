@@ -1,8 +1,8 @@
 package main.groovy.application
 
-import main.groovy.application.dao.CoconutRepository
+import main.groovy.application.dao.DocumentRepository
 import main.groovy.application.dao.DocTypeRepository
-import main.groovy.application.model.Coconut
+import main.groovy.application.model.Document
 import main.groovy.application.model.DocType
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -25,58 +25,58 @@ class Application extends WebMvcAutoConfiguration {
      * We can do our initialization logic and testing here.
      */
     @Bean
-    public CommandLineRunner user(CoconutRepository coconutRepository, DocTypeRepository docTypeRepository) {
+    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository) {
         return new CommandLineRunner() {
             @Override
             void run(String... args) throws Exception {
 
-                initCoconutValues()
+                initDocumentValues()
 
                 initDocTypeValues()
 
-                logCoconuts()
+                logDocuments()
             }
 
-            private void logCoconuts() {
-                log.info("Coconuts found with findAll():");
+            private void logDocuments() {
+                log.info("Documents found with findAll():");
                 log.info("-------------------------------");
-                for (Coconut coconut : coconutRepository.findAll()) {
-                    log.info(coconut.toString());
+                for (Document document : documentRepository.findAll()) {
+                    log.info(document.toString());
                 }
                 log.info("");
             }
 
-            private void initCoconutValues() {
-                Coconut coconut1 = new Coconut();
-                coconut1.setId(1);
-                coconut1.setName("Young");
-                coconut1.setRating(5);
-                coconut1.setDescription("Noor kookos, väga tervislik.")
-                coconut1.setWeight(2500)
+            private void initDocumentValues() {
+                Document document1 = new Document();
+                document1.setId(1);
+                document1.setName("Doc1");
+                document1.setDescription("Esimene dokument.");
+                document1.setType("Arve");
+                document1.setFilename("arve1.pdf");
 
-                Coconut coconut2 = new Coconut();
-                coconut2.setId(2);
-                coconut2.setName("Old");
-                coconut2.setRating(1);
-                coconut2.setDescription("Vana kookos, pigem mitte süüa.")
-                coconut2.setWeight(2500)
+                Document document2 = new Document();
+                document2.setId(2);
+                document2.setName("Doc2");
+                document2.setDescription("Teine dokument.");
+                document2.setType("Tarneleping");
+                document2.setFilename("aruanne1.pdf");
 
-                Coconut coconut3 = new Coconut();
-                coconut3.setId(3);
-                coconut3.setName("Raw");
-                coconut3.setRating(2);
-                coconut3.setDescription("Toores kookos. Söö, kui julged.")
-                coconut3.setWeight(2500)
+                Document document3 = new Document();
+                document3.setId(3);
+                document3.setName("Doc3");
+                document3.setDescription("Kolmas dokument.");
+                document3.setType("Tarneleping");
+                document3.setFilename("leping1.pdf");
 
-                coconutRepository.save(coconut1);
-                coconutRepository.save(coconut2);
-                coconutRepository.save(coconut3);
+                documentRepository.save(document1);
+                documentRepository.save(document2);
+                documentRepository.save(document3);
             }
 
             private void initDocTypeValues() {
-                DocType docType1 = new DocType("arve");
-                DocType docType2 = new DocType("finantsaruanne");
-                DocType docType3 = new DocType("tarneleping");
+                DocType docType1 = new DocType("Arve");
+                DocType docType2 = new DocType("Finantsaruanne");
+                DocType docType3 = new DocType("Tarneleping");
 
                 docTypeRepository.save(docType1);
                 docTypeRepository.save(docType2);
