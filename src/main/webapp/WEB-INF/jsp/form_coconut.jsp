@@ -11,7 +11,7 @@
     </c:if>
 
     <c:url var="post_url" value="/s?action=save"/>
-    <form:form action="${post_url}" modelAttribute="coconut" method="post">
+    <form:form action="${post_url}" modelAttribute="document" method="post">
 
         <div class="form-group">
             <form:input path="id" type="text" id="id" class="form-control" readonly="true"></form:input>
@@ -24,15 +24,15 @@
         </div>
 
         <div class="form-group">
-            <form:input path="weight" type="text" id="coconutWeight" placeholder="Kaal"
+            <form:input path="type" type="text" id="coconutWeight" placeholder="Tüüp"
                         class="form-control"></form:input>
-            <form:errors path="weight"><p class="error">Kaal peab jääma 1g ja 3000g vahele</p></form:errors>
+            <form:errors path="type"><p class="error">Kaal peab jääma 1g ja 3000g vahele</p></form:errors>
         </div>
 
         <div class="form-group">
-            <form:input path="rating" type="number" id="coconutRating" placeholder="Hinnang" class="form-control"
-                        min="0"></form:input>
-            <form:errors path="rating"><p class="error">Hinnang peab jääma vahemikku 0-5</p></form:errors>
+            <form:input path="filename" type="text" id="coconutRating" placeholder="Failinimi"
+                        class="form-control"></form:input>
+            <form:errors path="filename"><p class="error">Hinnang peab jääma vahemikku 0-5</p></form:errors>
         </div>
 
         <div class="form-group">

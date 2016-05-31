@@ -7,6 +7,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
+import org.springframework.ui.Model
 import org.springframework.validation.BindingResult
 import org.springframework.web.bind.annotation.ModelAttribute
 import org.springframework.web.bind.annotation.RequestMapping
@@ -33,7 +34,7 @@ class CoconutController {
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
     String getAllDocuments(Map<String, Object> model,
-                       @RequestParam(value = "id", required = false) String id) {
+                           @RequestParam(value = "id", required = false) String id) {
         logger.info("Found all documents...")
 
         if (id != null) {
@@ -52,21 +53,19 @@ class CoconutController {
     }
 
     @RequestMapping(value = "/s", method = RequestMethod.GET)
-    String createNewDoc(Map<String, Object> model,
-                          @RequestParam(value = "id", required = false) String id) {
+    String createNewDoc(Model model,
+                        @RequestParam(value = "id", required = false) String id) {
 
         logger.info("getNewDoc() reached...")
 
-        model.put("document", new Document());
-
         ArrayList<Document> documents = documentRepository.findAll();
-        model.put("documents", documents);
+        model.addAttribute("documents", documents);
 
         for (Document document : documents) {
             logger.info("Document: " + documents)
         }
 
-        model.put("documents", documentRepository.findAll())
+        model.addAttribute("document", new Document());
 
         return VIEW_COCONUTS
     }
@@ -115,7 +114,7 @@ class CoconutController {
 
     @RequestMapping(value = "/s", method = RequestMethod.POST)
     String updateCoconuts(@RequestParam("action") String action,
-                          @Valid @ModelAttribute("model") Document document,
+                          @Valid @ModelAttribute("document") Document document,
                           BindingResult bindingResult,
                           Map<String, Object> model) {
 
@@ -133,7 +132,7 @@ class CoconutController {
 
         model.put("documents", documentRepository.findAll())
 
-        REDIRECT_COCONUTS
+        return REDIRECT_COCONUTS
     }
 
     @RequestMapping(value = "/coconutservice/add", method = RequestMethod.POST)

@@ -6,32 +6,32 @@
     <table class="table table-striped coconut-table">
         <%--<thead>--%>
         <%--<tr class="text-center">--%>
-            <%--<th></th>--%>
-            <%--<th>Id</th>--%>
-            <%--<th>Nimi</th>--%>
-            <%--<th>Kaal</th>--%>
-            <%--<th>Hinnang</th>--%>
-            <%--<th></th>--%>
-            <%--<th></th>--%>
+        <%--<th></th>--%>
+        <%--<th>Id</th>--%>
+        <%--<th>Nimi</th>--%>
+        <%--<th>Kaal</th>--%>
+        <%--<th>Hinnang</th>--%>
+        <%--<th></th>--%>
+        <%--<th></th>--%>
         <%--</tr>--%>
         <%--</thead>--%>
 
         <%--<tbody>--%>
         <%--<c:forEach items="${requestScope.coconuts}" var="coconut">--%>
-            <%--<tr class="text-center">--%>
-                <%--<td><a>--%>
-                    <%--<button class="add-document tiny button" aria-hidden="true">Lisa--%>
-                    <%--</button>--%>
-                <%--</a></td>--%>
-                <%--<td><a href="?id=${coconut.id}">--%>
-                    <%--<button class="tiny button" aria-hidden="true">Muuda</button>--%>
-                <%--</a></td>--%>
-                <%--<td><c:out value="${coconut.id}"/></td>--%>
-                <%--<td><c:out value="${coconut.name}"/></td>--%>
-                <%--<td><c:out value="${coconut.weight}"/></td>--%>
-                <%--<td><c:out value="${coconut.rating}"/></td>--%>
-                <%--<td><a class="description-link tiny button" id="coconut-${coconut.id}">Kirjeldus</a></td>--%>
-            <%--</tr>--%>
+        <%--<tr class="text-center">--%>
+        <%--<td><a>--%>
+        <%--<button class="add-document tiny button" aria-hidden="true">Lisa--%>
+        <%--</button>--%>
+        <%--</a></td>--%>
+        <%--<td><a href="?id=${coconut.id}">--%>
+        <%--<button class="tiny button" aria-hidden="true">Muuda</button>--%>
+        <%--</a></td>--%>
+        <%--<td><c:out value="${coconut.id}"/></td>--%>
+        <%--<td><c:out value="${coconut.name}"/></td>--%>
+        <%--<td><c:out value="${coconut.weight}"/></td>--%>
+        <%--<td><c:out value="${coconut.rating}"/></td>--%>
+        <%--<td><a class="description-link tiny button" id="coconut-${coconut.id}">Kirjeldus</a></td>--%>
+        <%--</tr>--%>
         <%--</c:forEach>--%>
         <%--</tbody>--%>
 
@@ -55,9 +55,9 @@
                 <td><c:out value="${document.description}"/></td>
                 <td><c:out value="${document.type}"/></td>
                 <td><c:out value="${document.filename}"/></td>
-                <%--<td><a type="submit" action="edit" class="edit-document tiny button" id="document-${document.id}">--%>
+                    <%--<td><a type="submit" action="edit" class="edit-document tiny button" id="document-${document.id}">--%>
                     <%--Muuda--%>
-                <%--</a></td>--%>
+                    <%--</a></td>--%>
                 <td><a href="edit?id=${document.id}">
                     <button class="edit-document tiny button" aria-hidden="true">Muuda</button>
                 </a></td>
