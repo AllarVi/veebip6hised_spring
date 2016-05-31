@@ -22,7 +22,6 @@
                 <li><a href="${pageContext.request.contextPath}/../logs/lab1.log" target="_blank">Logid</a></li>
                 <li><a href="${pageContext.request.contextPath}/s">Servlet</a></li>
             </ul>
-            <p class="navbar-text navbar-right">Allar Viinamäe 134302IAPB</p>
         </div>
     </div>
 </nav>

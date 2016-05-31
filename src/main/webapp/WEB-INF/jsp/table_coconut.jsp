@@ -58,8 +58,8 @@
                 <%--<td><a type="submit" action="edit" class="edit-document tiny button" id="document-${document.id}">--%>
                     <%--Muuda--%>
                 <%--</a></td>--%>
-                <td><a href="?id=${document.id}">
-                    <button class="tiny button" aria-hidden="true">Muuda</button>
+                <td><a href="edit?id=${document.id}">
+                    <button class="edit-document tiny button" aria-hidden="true">Muuda</button>
                 </a></td>
                 <td><a type="submit" action="delete" class="delete-document tiny button" id="document-${document.id}">
                     Kustuta
@@ -112,7 +112,7 @@
                     <form:input path="description" type="text" placeholder="Description"></form:input>
                 </label>
                 <label>Dokumendi tüüp
-                    <select path="type" id="docTypes"></select>
+                    <form:select path="type" id="docTypes"></form:select>
                 </label>
                 <label>Failinimi
                     <form:input path="filename" type="text" placeholder="Filename"></form:input>

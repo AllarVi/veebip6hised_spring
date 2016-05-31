@@ -21,6 +21,5 @@ public  void setCoconutRepository(main.groovy.application.dao.CoconutRepository 
 public  main.groovy.application.dao.DocTypeRepository getDocTypeRepository() { return (main.groovy.application.dao.DocTypeRepository)null;}
 public  void setDocTypeRepository(main.groovy.application.dao.DocTypeRepository value) { }
 @org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/coconutservice") public  main.groovy.application.model.Coconut getCoconut(@org.springframework.web.bind.annotation.RequestParam(value="id") java.lang.String id) { return (main.groovy.application.model.Coconut)null;}
-@org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/delete") public  Document deleteDocument(@org.springframework.web.bind.annotation.RequestParam(value="id") java.lang.String id) { return (Document)null;}
 @org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/documentservice/doctype") public  org.springframework.http.ResponseEntity<java.lang.Object> getDocTypes() { return (org.springframework.http.ResponseEntity<java.lang.Object>)null;}
 }

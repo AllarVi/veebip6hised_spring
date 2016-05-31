@@ -31,43 +31,41 @@ class CoconutController {
 
     private static final Logger logger = LoggerFactory.getLogger(CoconutController.class);
 
-    @RequestMapping(value = "/s", method = RequestMethod.GET)
-    String getAllCoconuts(Map<String, Object> model,
-                          @RequestParam(value = "id", required = false) String id) {
-
-        logger.info("getAllCoconuts() reached...")
+    @RequestMapping(value = "/edit", method = RequestMethod.GET)
+    String getAllDocuments(Map<String, Object> model,
+                       @RequestParam(value = "id", required = false) String id) {
+        logger.info("Found all documents...")
 
         if (id != null) {
-
             Document document = documentRepository.findOne(id as Integer);
-            logger.info("Found your document...")
 
             if (document == null) {
-                logger.error("Kookost id-ga: ${id} ei leitud")
+                logger.error("Can't find document with ${id}!")
                 return VIEW_ERROR
             }
-            model.put("model", document);
-
-//            Coconut coconut = coconutRepository.findOne(id as Integer);
-//
-//            if (coconut == null) {
-//                logger.error("Kookost id-ga: ${id} ei leitud")
-//                return VIEW_ERROR
-//            }
-//            model.put("model", coconut);
+            model.put("document", document);
+            logger.info("Editing document with id ${id}...")
         }
 
-        model.put("coconuts", coconutRepository.findAll())
         model.put("documents", documentRepository.findAll())
+        return VIEW_COCONUTS
+    }
+
+    @RequestMapping(value = "/s", method = RequestMethod.GET)
+    String createNewDoc() {
+
+        logger.info("getNewDoc() reached...")
 
         model.put("document", new Document());
 
         ArrayList<Document> documents = documentRepository.findAll();
         model.put("documents", documents);
 
-        for (Document d : documents) {
-            logger.info("Document: " + d)
+        for (Document document : documents) {
+            logger.info("Document: " + documents)
         }
+
+        model.put("documents", documentRepository.findAll())
 
         return VIEW_COCONUTS
     }

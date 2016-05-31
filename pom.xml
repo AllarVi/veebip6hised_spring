@@ -6,7 +6,7 @@
     <name>Veebip6hised</name>
     <description>Vaheylesanne 2</description>
 
-    <groupId>allarviinamae</groupId>
+    <groupId>kristiina</groupId>
     <artifactId>vaheylesanne_2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>

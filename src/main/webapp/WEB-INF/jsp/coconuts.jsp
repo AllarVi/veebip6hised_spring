@@ -49,7 +49,6 @@
 
         <!-- Left Nav Section -->
         <ul class="left">
-            <p class="navbar-text navbar-right">Allar Viinamäe 134302IAPB</p>
         </ul>
     </section>
 </nav>
@@ -70,6 +69,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script>
+
+    <%--$(".edit-document").click(function () {--%>
+        <%--<jsp:include page="form_document.jsp"/>--%>
+    <%--}--%>
+
     $(".description-link").click(function () {
         var coconutId = $(this).attr('id').split("-")[1];
 
@@ -162,11 +166,11 @@
 
     });
 
-    function editDocument(data) {
-        console.log("Editing ..");
-        $("#id-value").text(data.id);
-
-    }
+//    function editDocument(data) {
+//        console.log("Editing ..");
+//        $("#id-value").text(data.id);
+//
+//    }
 
     //    $("#addDocumentForm").submit(function (event) {
     //        event.preventDefault();
