@@ -52,7 +52,8 @@ class CoconutController {
     }
 
     @RequestMapping(value = "/s", method = RequestMethod.GET)
-    String createNewDoc() {
+    String createNewDoc(Map<String, Object> model,
+                          @RequestParam(value = "id", required = false) String id) {
 
         logger.info("getNewDoc() reached...")
 
