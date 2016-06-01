@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gs-accessing-data-jpa.iml" filepath="$PROJECT_DIR$/gs-accessing-data-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/vaheylesanne_2.iml" filepath="$PROJECT_DIR$/vaheylesanne_2.iml" />
     </modules>
   </component>

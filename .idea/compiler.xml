@@ -22,12 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gs-accessing-data-jpa" />
         <module name="vaheylesanne_2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gs-accessing-data-jpa" target="1.8" />
       <module name="vaheylesanne_2" target="1.8" />
     </bytecodeTargetLevel>
   </component>

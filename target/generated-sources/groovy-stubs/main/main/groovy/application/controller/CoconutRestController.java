@@ -20,6 +20,12 @@ public  main.groovy.application.dao.CoconutRepository getCoconutRepository() { r
 public  void setCoconutRepository(main.groovy.application.dao.CoconutRepository value) { }
 public  main.groovy.application.dao.DocTypeRepository getDocTypeRepository() { return (main.groovy.application.dao.DocTypeRepository)null;}
 public  void setDocTypeRepository(main.groovy.application.dao.DocTypeRepository value) { }
+public  main.groovy.application.dao.DocSubjectRepository getDocSubjectRepository() { return (main.groovy.application.dao.DocSubjectRepository)null;}
+public  void setDocSubjectRepository(main.groovy.application.dao.DocSubjectRepository value) { }
+public  main.groovy.application.dao.DocSubjectTypeRepository getDocSubjectTypeRepository() { return (main.groovy.application.dao.DocSubjectTypeRepository)null;}
+public  void setDocSubjectTypeRepository(main.groovy.application.dao.DocSubjectTypeRepository value) { }
 @org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/coconutservice") public  main.groovy.application.model.Coconut getCoconut(@org.springframework.web.bind.annotation.RequestParam(value="id") java.lang.String id) { return (main.groovy.application.model.Coconut)null;}
 @org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/documentservice/doctype") public  org.springframework.http.ResponseEntity<java.lang.Object> getDocTypes() { return (org.springframework.http.ResponseEntity<java.lang.Object>)null;}
+@org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/documentservice/docsubject") public  org.springframework.http.ResponseEntity<java.lang.Object> getDocSubjects() { return (org.springframework.http.ResponseEntity<java.lang.Object>)null;}
+@org.springframework.web.bind.annotation.RequestMapping(method=org.springframework.web.bind.annotation.RequestMethod.GET, value="/documentservice/docsubjecttype") public  org.springframework.http.ResponseEntity<java.lang.Object> getDocSubjectTypes() { return (org.springframework.http.ResponseEntity<java.lang.Object>)null;}
 }
