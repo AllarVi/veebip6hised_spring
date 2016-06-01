@@ -2,8 +2,12 @@ package main.groovy.application
 
 import main.groovy.application.dao.DocumentRepository
 import main.groovy.application.dao.DocTypeRepository
+import main.groovy.application.dao.UserAccountRepository
+import main.groovy.application.dao.UserTypeRepository
 import main.groovy.application.model.Document
 import main.groovy.application.model.DocType
+import main.groovy.application.model.UserAccount
+import main.groovy.application.model.UserType
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
@@ -25,7 +29,7 @@ class Application extends WebMvcAutoConfiguration {
      * We can do our initialization logic and testing here.
      */
     @Bean
-    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository) {
+    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository, UserAccountRepository userAccountRepository, UserTypeRepository userTypeRepository) {
         return new CommandLineRunner() {
             @Override
             void run(String... args) throws Exception {
@@ -34,6 +38,9 @@ class Application extends WebMvcAutoConfiguration {
 
                 initDocTypeValues()
 
+                initUserAccountValues()
+
+                initUserTypeValues()
                 logDocuments()
             }
 
@@ -81,6 +88,30 @@ class Application extends WebMvcAutoConfiguration {
                 docTypeRepository.save(docType1);
                 docTypeRepository.save(docType2);
                 docTypeRepository.save(docType3);
+            }
+
+            private void initUserAccountValues(){
+                UserAccount user1 = new UserAccount();
+                user1.setUsername("qwerty");
+                user1.setPassword("1234");
+                user1.setType("tootaja");
+
+                UserAccount user2 = new UserAccount();
+                user2.setUsername("asdfg");
+                user2.setPassword("1234");
+                user2.setType("klient");
+
+                userAccountRepository.save(user1);
+                userAccountRepository.save(user2);
+            }
+
+            private void initUserTypeValues(){
+                UserType userType1 = new UserType("tootaja");
+                UserType userType2 = new UserType("klient");
+
+                userTypeRepository.save(userType1);
+                userTypeRepository.save(userType2);
+
             }
         };
     }
