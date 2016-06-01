@@ -58,7 +58,6 @@
     <c:choose>
         <c:when test="${document.name != null}">
             <jsp:include page="form_coconut.jsp"/>
-            <%--<jsp:include page="form_document.jsp"/>--%>
         </c:when>
         <c:otherwise>
             <jsp:include page="table_coconut.jsp"/>

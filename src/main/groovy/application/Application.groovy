@@ -1,9 +1,17 @@
 package main.groovy.application
 
+import main.groovy.application.dao.DocSubjectRepository
+import main.groovy.application.dao.DocSubjectTypeRepository
 import main.groovy.application.dao.DocumentRepository
 import main.groovy.application.dao.DocTypeRepository
+import main.groovy.application.dao.UserAccountRepository
+import main.groovy.application.dao.UserTypeRepository
+import main.groovy.application.model.DocSubject
+import main.groovy.application.model.DocSubjectType
 import main.groovy.application.model.Document
 import main.groovy.application.model.DocType
+import main.groovy.application.model.UserAccount
+import main.groovy.application.model.UserType
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
@@ -25,7 +33,9 @@ class Application extends WebMvcAutoConfiguration {
      * We can do our initialization logic and testing here.
      */
     @Bean
-    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository) {
+    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository,
+                                  DocSubjectRepository docSubjectRepository, DocSubjectTypeRepository docSubjectTypeRepository,
+                                  UserAccountRepository userAccountRepository, UserTypeRepository userTypeRepository) {
         return new CommandLineRunner() {
             @Override
             void run(String... args) throws Exception {
@@ -33,6 +43,14 @@ class Application extends WebMvcAutoConfiguration {
                 initDocumentValues()
 
                 initDocTypeValues()
+
+                initDocSubjectValues()
+
+                initDocSubjectTypeValues()
+
+                initUserAccountValues()
+
+                initUserTypeValues()
 
                 logDocuments()
             }
@@ -81,6 +99,58 @@ class Application extends WebMvcAutoConfiguration {
                 docTypeRepository.save(docType1);
                 docTypeRepository.save(docType2);
                 docTypeRepository.save(docType3);
+            }
+
+            private void initDocSubjectTypeValues() {
+                DocSubjectType docSubjectType1 = new DocSubjectType("Autor");
+                DocSubjectType docSubjectType2 = new DocSubjectType("Tema kohta");
+                DocSubjectType docSubjectType3 = new DocSubjectType("Talle saadetud");
+                DocSubjectType docSubjectType4 = new DocSubjectType("Saatja");
+
+                docTypeRepository.save(docSubjectType1);
+                docTypeRepository.save(docSubjectType2);
+                docTypeRepository.save(docSubjectType3);
+                docTypeRepository.save(docSubjectType4);
+
+            }
+
+            private void initDocSubjectValues() {
+                DocSubject docSubject1 = new DocSubject("Marten Maasikas");
+                DocSubject docSubject2 = new DocSubject("Anna Aru");
+                DocSubject docSubject3 = new DocSubject("Tanel Tuisk");
+                DocSubject docSubject4 = new DocSubject("Jüri Juurikas");
+                DocSubject docSubject5 = new DocSubject("Maali Maalt");
+
+                docTypeRepository.save(docSubject1);
+                docTypeRepository.save(docSubject2);
+                docTypeRepository.save(docSubject3);
+                docTypeRepository.save(docSubject4);
+                docTypeRepository.save(docSubject5);
+
+            }
+
+            private void initUserAccountValues(){
+                UserAccount user1 = new UserAccount();
+                user1.setUsername("qwerty");
+                user1.setPassword("1234");
+                user1.setType("tootaja");
+
+                UserAccount user2 = new UserAccount();
+                user2.setUsername("asdfg");
+                user2.setPassword("1234");
+                user2.setType("klient");
+
+                userAccountRepository.save(user1);
+                userAccountRepository.save(user2);
+            }
+
+            private void initUserTypeValues(){
+                UserType userType1 = new UserType("tootaja");
+                UserType userType2 = new UserType("klient");
+
+                userTypeRepository.save(userType1);
+                userTypeRepository.save(userType2);
+
             }
         };
     }
