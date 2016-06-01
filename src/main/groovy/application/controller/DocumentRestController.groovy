@@ -1,10 +1,10 @@
 package main.groovy.application.controller
 
-import main.groovy.application.dao.CoconutRepository
+
 import main.groovy.application.dao.DocTypeRepository
 import main.groovy.application.dao.DocSubjectRepository
 import main.groovy.application.dao.DocSubjectTypeRepository
-import main.groovy.application.model.Coconut
+//import main.groovy.application.model.Test
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class CoconutRestController {
+class DocumentRestController {
 
-    @Autowired
-    CoconutRepository coconutRepository
 
     @Autowired
     DocTypeRepository docTypeRepository
@@ -30,12 +28,12 @@ class CoconutRestController {
     @Autowired
     DocSubjectTypeRepository docSubjectTypeRepository
 
-    private static final Logger logger = LoggerFactory.getLogger(CoconutController.class);
+    private static final Logger logger = LoggerFactory.getLogger(DocumentController.class);
 
-    @RequestMapping(value = "/coconutservice", method = RequestMethod.GET)
-    Coconut getCoconut(@RequestParam("id") String id) {
-        return coconutRepository.findOne(id as Integer)
-    }
+//    @RequestMapping(value = "/coconutservice", method = RequestMethod.GET)
+//    Test getCoconut(@RequestParam("id") String id) {
+//        return coconutRepository.findOne(id as Integer)
+//    }
 
     @RequestMapping(value = "/documentservice/doctype", method = RequestMethod.GET)
     ResponseEntity<Object> getDocTypes() {

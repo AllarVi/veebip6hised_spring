@@ -1,6 +1,6 @@
 package main.groovy.application.controller
 
-import main.groovy.application.dao.CoconutRepository
+
 import main.groovy.application.dao.DocumentRepository
 import main.groovy.application.model.Document
 import org.slf4j.Logger
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam
 import javax.validation.Valid
 
 @Controller
-class CoconutController {
+class DocumentController {
 
     public static final String ACTION_SAVE = "save"
     public static final String VIEW_COCONUTS = "coconuts"
@@ -25,12 +25,9 @@ class CoconutController {
     public static final String REDIRECT_COCONUTS = "redirect:/s"
 
     @Autowired
-    CoconutRepository coconutRepository
-
-    @Autowired
     DocumentRepository documentRepository
 
-    private static final Logger logger = LoggerFactory.getLogger(CoconutController.class);
+    private static final Logger logger = LoggerFactory.getLogger(DocumentController.class);
 
     @RequestMapping(value = "/edit", method = RequestMethod.GET)
     String getAllDocuments(Map<String, Object> model,
