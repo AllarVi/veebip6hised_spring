@@ -19,16 +19,20 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration
 import org.springframework.context.annotation.Bean
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 
 @SpringBootApplication
 class Application extends WebMvcAutoConfiguration {
 
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
+
+
     static void main(String[] args) {
         SpringApplication.run Application, args
     }
 
+    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     /**
      * We can do our initialization logic and testing here.
      */
@@ -132,12 +136,12 @@ class Application extends WebMvcAutoConfiguration {
             private void initUserAccountValues(){
                 UserAccount user1 = new UserAccount();
                 user1.setUsername("qwerty");
-                user1.setPassword("1234");
+                user1.setPassword(encoder.encode("1234"));
                 user1.setType("tootaja");
 
                 UserAccount user2 = new UserAccount();
                 user2.setUsername("asdfg");
-                user2.setPassword("1234");
+                user2.setPassword(encoder.encode("1234"));
                 user2.setType("klient");
 
                 userAccountRepository.save(user1);

@@ -3,7 +3,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <div class="row">
-    <table class="table table-striped coconut-table">
+    <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+    <table class="table table-striped coconut-table order-table">
 
         <thead>
         <tr class="text-center">
