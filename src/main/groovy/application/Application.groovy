@@ -1,11 +1,7 @@
 package main.groovy.application
 
-import main.groovy.application.dao.DocSubjectRepository
-import main.groovy.application.dao.DocSubjectTypeRepository
 import main.groovy.application.dao.DocumentRepository
 import main.groovy.application.dao.DocTypeRepository
-import main.groovy.application.model.DocSubject
-import main.groovy.application.model.DocSubjectType
 import main.groovy.application.model.Document
 import main.groovy.application.model.DocType
 import org.slf4j.Logger
@@ -25,10 +21,11 @@ class Application extends WebMvcAutoConfiguration {
         SpringApplication.run Application, args
     }
 
+    /**
+     * We can do our initialization logic and testing here.
+     */
     @Bean
-    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository,
-                                  DocSubjectTypeRepository docSubjectTypeRepository,
-                                  DocSubjectRepository docSubjectRepository) {
+    public CommandLineRunner user(DocumentRepository documentRepository, DocTypeRepository docTypeRepository) {
         return new CommandLineRunner() {
             @Override
             void run(String... args) throws Exception {
@@ -36,10 +33,6 @@ class Application extends WebMvcAutoConfiguration {
                 initDocumentValues()
 
                 initDocTypeValues()
-
-                initDocSubjectTypeValues()
-
-                initDocSubjectValues()
 
                 logDocuments()
             }
@@ -88,32 +81,6 @@ class Application extends WebMvcAutoConfiguration {
                 docTypeRepository.save(docType1);
                 docTypeRepository.save(docType2);
                 docTypeRepository.save(docType3);
-            }
-
-            private void initDocSubjectTypeValues() {
-                DocSubjectType docSubjectType1 = new DocSubjectType("Autor");
-                DocSubjectType docSubjectType2 = new DocSubjectType("Tema kohta");
-                DocSubjectType docSubjectType3 = new DocSubjectType("Talle saadetud");
-                DocSubjectType docSubjectType4 = new DocSubjectType("Saatja");
-
-                docSubjectTypeRepository.save(docSubjectType1);
-                docSubjectTypeRepository.save(docSubjectType2);
-                docSubjectTypeRepository.save(docSubjectType3);
-                docSubjectTypeRepository.save(docSubjectType4);
-            }
-
-            private void initDocSubjectValues() {
-                DocSubject docSubject1 = new DocSubject("Marten Maasikas");
-                DocSubject docSubject2 = new DocSubject("Juhan Juurikas");
-                DocSubject docSubject3 = new DocSubject("Tanel Tuisk");
-                DocSubject docSubject4 = new DocSubject("Kaarel Klient");
-                DocSubject docSubject5 = new DocSubject("Anna Aru");
-
-                docSubjectRepository.save(docSubject1);
-                docSubjectRepository.save(docSubject2);
-                docSubjectRepository.save(docSubject3);
-                docSubjectRepository.save(docSubject4);
-                docSubjectRepository.save(docSubject5);
             }
         };
     }
