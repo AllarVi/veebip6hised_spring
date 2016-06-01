@@ -20,6 +20,11 @@ public class Document {
 
     private String filename;
 
+    private String subject;
+
+
+    private String relation;
+
     public Document() {
     }
 
@@ -63,6 +68,22 @@ public class Document {
         this.filename = filename;
     }
 
+    public String getRelation() {
+        return relation;
+    }
+
+    public void setRelation(String relation) {
+        this.relation = relation;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
     @Override
     public String toString() {
         return "Document{" +
@@ -71,6 +92,8 @@ public class Document {
                 ", description='" + description + '\'' +
                 ", type='" + type + '\'' +
                 ", filename='" + filename + '\'' +
+                ", subject='" + subject + '\'' +
+                ", relation='" + relation + '\'' +
                 '}';
     }
 }

@@ -42,6 +42,8 @@
             <th>Kirjeldus</th>
             <th>Tüüp</th>
             <th>Failinimi</th>
+            <th>Subjekt</th>
+            <th>Seos</th>
             <th></th>
             <th></th>
         </tr>
@@ -55,9 +57,8 @@
                 <td><c:out value="${document.description}"/></td>
                 <td><c:out value="${document.type}"/></td>
                 <td><c:out value="${document.filename}"/></td>
-                    <%--<td><a type="submit" action="edit" class="edit-document tiny button" id="document-${document.id}">--%>
-                    <%--Muuda--%>
-                    <%--</a></td>--%>
+                <td><c:out value="${document.subject}"/></td>
+                <td><c:out value="${document.relation}"/></td>
                 <td><a href="edit?id=${document.id}">
                     <button class="edit-document tiny button" aria-hidden="true">Muuda</button>
                 </a></td>
@@ -81,7 +82,7 @@
         <form class="form-horizontal">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Id:
-                    <span class="form-control-static" id="id-value"></span></label>
+                    <span name="id-value" class="form-control-static" id="id-value"></span></label>
             </div>
             <div class="form-group">
                 <label for="description" class="col-sm-2 control-label">Kirjeldus</label>
@@ -116,6 +117,12 @@
                 </label>
                 <label>Failinimi
                     <form:input path="filename" type="text" placeholder="Filename"></form:input>
+                </label>
+                <label>Subjekt
+                    <form:select path="subject" id="docSubject"></form:select>
+                </label>
+                <label>Seos
+                    <form:select path="relation" id="docSubjectType"></form:select>
                 </label>
                 <p><input type="submit" class="button expanded" value="Add document"></p>
             </div>

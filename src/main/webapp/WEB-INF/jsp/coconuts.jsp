@@ -104,7 +104,7 @@
 
     function initDocTypes(data) {
         $.each(data, function () {
-            $('#docTypes').append(new Option(this.typeName, this.id));
+            $('#docTypes').append(new Option(this.typeName, this.typeName));
         });
     }
 
@@ -116,10 +116,42 @@
         });
     };
 
+    function initDocSubjectTypes(data) {
+        $.each(data, function () {
+            $('#docSubjectType').append(new Option(this.subjectTypeName, this.subjectTypeName));
+        });
+    }
+
+    var getDocSubjectTypes = function () {
+        $.get("${pageContext.request.contextPath}/documentservice/docsubjecttype", function (data) {
+            initDocSubjectTypes(data);
+        }).fail(function () {
+            console.log("Viga subjekti tüüpide küsimisel!");
+        });
+    };
+
+    function initDocSubjects(data) {
+        $.each(data, function () {
+            $('#docSubject').append(new Option(this.subjectName, this.subjectName));
+        });
+    }
+
+    var getDocSubjects = function () {
+        $.get("${pageContext.request.contextPath}/documentservice/docsubject", function (data) {
+            initDocSubjects(data);
+        }).fail(function () {
+            console.log("Viga subjektide küsimisel!");
+        });
+    };
+
     $(".add-document").click(function () {
         console.log("Add document button clicked");
 
         getDocTypes();
+
+        getDocSubjects();
+
+        getDocSubjectTypes();
 
         showAddDocument();
     });
@@ -166,24 +198,6 @@
 
     });
 
-//    function editDocument(data) {
-//        console.log("Editing ..");
-//        $("#id-value").text(data.id);
-//
-//    }
-
-    //    $("#addDocumentForm").submit(function (event) {
-    //        event.preventDefault();
-    //
-    //        // get all the inputs into an array.
-    //        var $inputs = $('#addDocumentForm :input');
-    //
-    //        var values = {};
-    //        $inputs.each(function() {
-    //            values[this.name] = $(this).val();
-    //            console.log($(this).val());
-    //        });
-    //    });
 </script>
 
 <!-- Compressed JavaScript -->

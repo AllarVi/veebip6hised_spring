@@ -2,6 +2,8 @@ package main.groovy.application.controller
 
 import main.groovy.application.dao.CoconutRepository
 import main.groovy.application.dao.DocTypeRepository
+import main.groovy.application.dao.DocSubjectRepository
+import main.groovy.application.dao.DocSubjectTypeRepository
 import main.groovy.application.model.Coconut
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -22,6 +24,12 @@ class CoconutRestController {
     @Autowired
     DocTypeRepository docTypeRepository
 
+    @Autowired
+    DocSubjectRepository docSubjectRepository
+
+    @Autowired
+    DocSubjectTypeRepository docSubjectTypeRepository
+
     private static final Logger logger = LoggerFactory.getLogger(CoconutController.class);
 
     @RequestMapping(value = "/coconutservice", method = RequestMethod.GET)
@@ -29,14 +37,19 @@ class CoconutRestController {
         return coconutRepository.findOne(id as Integer)
     }
 
-//    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-//    Document deleteDocument(@RequestParam("id") String id) {
-//        return documentRepository.findOne(id as Integer)
-//    }
-
     @RequestMapping(value = "/documentservice/doctype", method = RequestMethod.GET)
     ResponseEntity<Object> getDocTypes() {
         return new ResponseEntity<>(docTypeRepository.findAll(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/documentservice/docsubject", method = RequestMethod.GET)
+    ResponseEntity<Object> getDocSubjects() {
+        return new ResponseEntity<>(docSubjectRepository.findAll(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/documentservice/docsubjecttype", method = RequestMethod.GET)
+    ResponseEntity<Object> getDocSubjectTypes() {
+        return new ResponseEntity<>(docSubjectTypeRepository.findAll(), HttpStatus.OK);
     }
 
 }

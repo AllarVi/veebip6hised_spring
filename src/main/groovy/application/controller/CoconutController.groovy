@@ -56,7 +56,7 @@ class CoconutController {
     String createNewDoc(Model model,
                         @RequestParam(value = "id", required = false) String id) {
 
-        logger.info("getNewDoc() reached...")
+        logger.info("createNewDoc() reached...")
 
         ArrayList<Document> documents = documentRepository.findAll();
         model.addAttribute("documents", documents);
@@ -89,28 +89,6 @@ class CoconutController {
         return "documents"
     }
 
-//    @RequestMapping(value = "/s", method = RequestMethod.POST)
-//    String updateCoconuts(@RequestParam("action") String action,
-//                          @Valid @ModelAttribute("model") Coconut coconut,
-//                          BindingResult bindingResult,
-//                          Map<String, Object> model) {
-//
-//        logger.info("Updating model...")
-//
-//        if (bindingResult.hasErrors()) {
-//            logger.error("Errors!")
-//            model.put("model", coconut)
-//            return VIEW_COCONUTS
-//        }
-//
-//        if (ACTION_SAVE.equals(action)) {
-//            coconutRepository.save(coconut)
-//        }
-//
-//        model.put(VIEW_COCONUTS, coconutRepository.findAll())
-//
-//        REDIRECT_COCONUTS
-//    }
 
     @RequestMapping(value = "/s", method = RequestMethod.POST)
     String updateCoconuts(@RequestParam("action") String action,
