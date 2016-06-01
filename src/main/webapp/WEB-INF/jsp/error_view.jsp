@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Coconuts</title>
+    <title>Documents</title>
 
     <style>
         .coconut-table th {

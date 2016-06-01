@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class DocumentRestController {
 
-
     @Autowired
     DocTypeRepository docTypeRepository
 
@@ -29,11 +28,6 @@ class DocumentRestController {
     DocSubjectTypeRepository docSubjectTypeRepository
 
     private static final Logger logger = LoggerFactory.getLogger(DocumentController.class);
-
-//    @RequestMapping(value = "/coconutservice", method = RequestMethod.GET)
-//    Test getCoconut(@RequestParam("id") String id) {
-//        return coconutRepository.findOne(id as Integer)
-//    }
 
     @RequestMapping(value = "/documentservice/doctype", method = RequestMethod.GET)
     ResponseEntity<Object> getDocTypes() {

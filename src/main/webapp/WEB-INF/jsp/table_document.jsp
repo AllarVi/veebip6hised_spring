@@ -74,7 +74,7 @@
 <div class="row form-container-add-document">
     <div class="medium-6 medium-centered large-4 large-centered columns">
 
-        <form:form id="addDocumentForm" action="${pageContext.request.contextPath}/coconutservice/add"
+        <form:form id="addDocumentForm" action="${pageContext.request.contextPath}/documentservice/add"
                    modelAttribute="document" method="POST">
             <div class="row column log-in-form">
                 <label>Nimi

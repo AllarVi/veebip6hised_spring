@@ -20,9 +20,9 @@ import javax.validation.Valid
 class DocumentController {
 
     public static final String ACTION_SAVE = "save"
-    public static final String VIEW_COCONUTS = "coconuts"
+    public static final String VIEW_DOCUMENTS = "documents"
     public static final String VIEW_ERROR = "error_view"
-    public static final String REDIRECT_COCONUTS = "redirect:/s"
+    public static final String REDIRECT_DOCUMENTS = "redirect:/s"
 
     @Autowired
     DocumentRepository documentRepository
@@ -46,7 +46,7 @@ class DocumentController {
         }
 
         model.put("documents", documentRepository.findAll())
-        return VIEW_COCONUTS
+        return VIEW_DOCUMENTS
     }
 
     @RequestMapping(value = "/s", method = RequestMethod.GET)
@@ -64,13 +64,13 @@ class DocumentController {
 
         model.addAttribute("document", new Document());
 
-        return VIEW_COCONUTS
+        return VIEW_DOCUMENTS
     }
 
     @RequestMapping(value = "/delete")
     String deleteDocument(@RequestParam(value = "id", required = false) String id) {
 
-        logger.info("getAllCoconuts() reached...")
+        logger.info("deleteDocument() reached...")
 
         if (id != null) {
 
@@ -79,7 +79,7 @@ class DocumentController {
 
             logger.info("Trying to delete...")
             documentRepository.delete(document)
-            REDIRECT_COCONUTS
+            REDIRECT_DOCUMENTS
 
         }
 
@@ -88,10 +88,10 @@ class DocumentController {
 
 
     @RequestMapping(value = "/s", method = RequestMethod.POST)
-    String updateCoconuts(@RequestParam("action") String action,
-                          @Valid @ModelAttribute("document") Document document,
-                          BindingResult bindingResult,
-                          Map<String, Object> model) {
+    String updateDocuments(@RequestParam("action") String action,
+                           @Valid @ModelAttribute("document") Document document,
+                           BindingResult bindingResult,
+                           Map<String, Object> model) {
 
         logger.info("Updating model...")
 
@@ -107,16 +107,16 @@ class DocumentController {
 
         model.put("documents", documentRepository.findAll())
 
-        return REDIRECT_COCONUTS
+        return REDIRECT_DOCUMENTS
     }
 
-    @RequestMapping(value = "/coconutservice/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/documentservice/add", method = RequestMethod.POST)
     String addCoconut(@ModelAttribute("document") Document document) {
         logger.info("Document adding controller reached...")
 
         Document savedDocument = documentRepository.save(document);
         if (savedDocument != null) {
-            return REDIRECT_COCONUTS;
+            return REDIRECT_DOCUMENTS;
         }
 
         return VIEW_ERROR;

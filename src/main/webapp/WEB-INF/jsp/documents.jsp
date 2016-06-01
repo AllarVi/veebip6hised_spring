@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Coconuts</title>
+    <title>Documents</title>
 
     <style>
         .coconut-table th {
@@ -99,10 +99,10 @@
 
     <c:choose>
         <c:when test="${document.name != null}">
-            <jsp:include page="form_coconut.jsp"/>
+            <jsp:include page="form_document.jsp"/>
         </c:when>
         <c:otherwise>
-            <jsp:include page="table_coconut.jsp"/>
+            <jsp:include page="table_document.jsp"/>
         </c:otherwise>
     </c:choose>
 
@@ -111,31 +111,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script>
 
-    <%--$(".edit-document").click(function () {--%>
-        <%--<jsp:include page="form_document.jsp"/>--%>
-    <%--}--%>
-
-    $(".description-link").click(function () {
-        var coconutId = $(this).attr('id').split("-")[1];
-
-        $.get("${pageContext.request.contextPath}/coconutservice?id=" + coconutId, function (data) {
-            showDescription(data);
-        }).fail(function () {
-            alert("Viga!");
-        });
-    });
-
     $("#hide-desc").click(function () {
         $(".form-container").hide();
     });
-
-    function showDescription(data) {
-        console.log(data.id);
-        $("#id-value").text(data.id);
-        $("#description").val(data.description);
-
-        $(".form-container").show();
-    }
 
     //    Add document
 
