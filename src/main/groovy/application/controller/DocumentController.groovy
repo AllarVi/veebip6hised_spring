@@ -50,11 +50,11 @@ class DocumentController {
 
         ModelAndView model = new ModelAndView();
         if (error != null) {
-            model.addObject("error", "Invalid username and password!");
+            model.addObject("error", "Vale kasutajanimi ja salasõna!");
         }
 
         if (logout != null) {
-            model.addObject("msg", "You've been logged out successfully.");
+            model.addObject("msg", "Välja logimine õnnestus.");
         }
         model.setViewName("login");
 
