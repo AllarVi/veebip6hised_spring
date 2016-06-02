@@ -5,12 +5,12 @@
     <title>Documents</title>
 
     <style>
-        .coconut-table th {
+        .document-table th {
             text-align: center;
         }
 
         .error {
-            color: pink;
+            color: #ff5c33;
         }
 
         .form-container {
@@ -81,18 +81,6 @@
             <h1><a class="navbar-brand" href="${pageContext.request.contextPath}/s">Veebipõhised rakendused</a></h1>
         </li>
     </ul>
-
-    <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-            <li><a href="${pageContext.request.contextPath}/logs.txt" target="_blank">Logid</a></li>
-            <li><a href="${pageContext.request.contextPath}/s">Servlet</a></li>
-        </ul>
-
-        <!-- Left Nav Section -->
-        <ul class="left">
-        </ul>
-    </section>
 </nav>
 
 <div>
@@ -204,7 +192,7 @@
     $(".edit-document").click(function () {
         console.log("Edit document button clicked");
 
-        var documentId = $(this).attr('id').split("-")[1];;
+        var documentId = $(this).attr('id').split("-")[1];
         console.log("Edit document button clicked id " + documentId);
 
         $.get("${pageContext.request.contextPath}/s?id=" + documentId, function (data) {

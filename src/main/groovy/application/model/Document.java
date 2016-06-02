@@ -1,9 +1,9 @@
 package main.groovy.application.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Document {
@@ -12,16 +12,23 @@ public class Document {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(nullable = false)
+    @Size(min = 1, max = 30)
     private String name;
 
+    @Column(nullable = false)
+    @NotBlank
     private String description;
 
+    @Column(nullable = false)
+    @NotBlank
     private String type;
 
+    @Column(nullable = false)
+    @NotBlank
     private String filename;
 
     private String subject;
-
 
     private String relation;
 

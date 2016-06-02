@@ -98,7 +98,7 @@ class DocumentController {
         if (bindingResult.hasErrors()) {
             logger.error("Errors!")
             model.put("model", document)
-            return "documents"
+            return VIEW_DOCUMENTS
         }
 
         if (ACTION_SAVE.equals(action)) {
@@ -111,14 +111,22 @@ class DocumentController {
     }
 
     @RequestMapping(value = "/documentservice/add", method = RequestMethod.POST)
-    String addCoconut(@ModelAttribute("document") Document document) {
+    String addDocument(@Valid @ModelAttribute("document") Document document,
+                        BindingResult result, Map<String, Object> model) {
         logger.info("Document adding controller reached...")
 
+
+
+        if (result.hasErrors()) {
+            logger.error("Errors!")
+            return "error_view_add"
+        }
+
         Document savedDocument = documentRepository.save(document);
+
         if (savedDocument != null) {
             return REDIRECT_DOCUMENTS;
         }
-
         return VIEW_ERROR;
     }
 }

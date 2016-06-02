@@ -19,24 +19,23 @@
         </div>
 
         <div class="form-group">
-            <form:input path="name" type="text" id="coconutName" placeholder="Nimi" class="form-control"></form:input>
+            <form:input path="name" type="text" id="documentName" placeholder="Nimi" class="form-control"></form:input>
             <form:errors path="name"><p class="error">Nimi peab jääma 1 ja 30 tähemärgi vahele</p></form:errors>
         </div>
 
         <div class="form-group">
-            <form:input path="type" type="text" id="coconutWeight" placeholder="Tüüp"
+            <form:input path="type" type="text" id="docType" placeholder="Tüüp" readonly="true"
                         class="form-control"></form:input>
-            <form:errors path="type"><p class="error">Kaal peab jääma 1g ja 3000g vahele</p></form:errors>
         </div>
 
         <div class="form-group">
-            <form:input path="filename" type="text" id="coconutRating" placeholder="Failinimi"
+            <form:input path="filename" type="text" id="documentFilename" placeholder="Failinimi"
                         class="form-control"></form:input>
-            <form:errors path="filename"><p class="error">Hinnang peab jääma vahemikku 0-5</p></form:errors>
+            <form:errors path="filename"><p class="error">Failinimi ei tohi olla tühi</p></form:errors>
         </div>
 
         <div class="form-group">
-            <form:textarea path="description" rows="3" id="coconutDescription" placeholder="Kirjeldus"
+            <form:textarea path="description" rows="3" id="documentDescription" placeholder="Kirjeldus"
                            class="form-control"></form:textarea>
             <form:errors path="description"><p class="error">Kirjeldus ei tohi tühi olla</p></form:errors>
         </div>
