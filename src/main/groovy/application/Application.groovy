@@ -32,7 +32,7 @@ class Application extends WebMvcAutoConfiguration {
         SpringApplication.run Application, args
     }
 
-    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+   // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     /**
      * We can do our initialization logic and testing here.
      */
@@ -75,6 +75,8 @@ class Application extends WebMvcAutoConfiguration {
                 document1.setDescription("Esimene dokument.");
                 document1.setType("Arve");
                 document1.setFilename("arve1.pdf");
+                document1.setSubject("Marten Maasikas");
+                document1.setRelation("Autor");
 
                 Document document2 = new Document();
                 document2.setId(2);
@@ -82,6 +84,8 @@ class Application extends WebMvcAutoConfiguration {
                 document2.setDescription("Teine dokument.");
                 document2.setType("Tarneleping");
                 document2.setFilename("aruanne1.pdf");
+                document2.setSubject("Marten Maasikas");
+                document2.setRelation("Autor");
 
                 Document document3 = new Document();
                 document3.setId(3);
@@ -89,6 +93,8 @@ class Application extends WebMvcAutoConfiguration {
                 document3.setDescription("Kolmas dokument.");
                 document3.setType("Tarneleping");
                 document3.setFilename("leping1.pdf");
+                document3.setSubject("Marten Maasikas");
+                document3.setRelation("Autor");
 
                 documentRepository.save(document1);
                 documentRepository.save(document2);
@@ -136,12 +142,12 @@ class Application extends WebMvcAutoConfiguration {
             private void initUserAccountValues(){
                 UserAccount user1 = new UserAccount();
                 user1.setUsername("qwerty");
-                user1.setPassword(encoder.encode("1234"));
+                user1.setPassword("1234");
                 user1.setType("tootaja");
 
                 UserAccount user2 = new UserAccount();
                 user2.setUsername("asdfg");
-                user2.setPassword(encoder.encode("1234"));
+                user2.setPassword("1234");
                 user2.setType("klient");
 
                 userAccountRepository.save(user1);

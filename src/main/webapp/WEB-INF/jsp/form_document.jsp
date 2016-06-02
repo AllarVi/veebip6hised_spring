@@ -40,6 +40,17 @@
             <form:errors path="description"><p class="error">Kirjeldus ei tohi tühi olla</p></form:errors>
         </div>
 
+        <div class="form-group">
+            <form:input path="subject" type="text" id="documentSubject" placeholder="Subjekt"
+                        class="form-control"></form:input>
+            <form:errors path="subject"><p class="error">Subjekt ei tohi olla tühi</p></form:errors>
+        </div>
+
+        <div class="form-group">
+            <form:input path="relation" type="text" id="documentRelation" placeholder="Seos"
+                        class="form-control"></form:input>
+            <form:errors path="relation"><p class="error">Seos ei tohi olla tühi</p></form:errors>
+        </div>
 
         <button type="submit" class="success button">Salvesta</button>
     </form:form>

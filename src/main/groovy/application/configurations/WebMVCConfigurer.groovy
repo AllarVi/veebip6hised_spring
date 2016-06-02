@@ -2,6 +2,7 @@ package main.groovy.application.configurations
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.jdbc.datasource.DriverManagerDataSource
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer
 import org.springframework.web.servlet.config.annotation.EnableWebMvc
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
@@ -15,6 +16,16 @@ class WebMVCConfigurer extends WebMvcConfigurerAdapter {
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer defaultServletHandlerConfigurer) {
         defaultServletHandlerConfigurer.enable();
+    }
+
+    @Bean(name = "dataSource")
+    public DriverManagerDataSource dataSource() {
+        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+        driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
+        driverManagerDataSource.setUrl("jdbc:postgresql://localhost:5432/veebip6hised");
+        driverManagerDataSource.setUsername("postgres");
+        driverManagerDataSource.setPassword("kallisliisa");
+        return driverManagerDataSource;
     }
 
     @Bean
