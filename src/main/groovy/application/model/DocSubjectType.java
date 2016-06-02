@@ -11,6 +11,9 @@ public class DocSubjectType {
 
     private String subjectTypeName;
 
+    public DocSubjectType() {
+    }
+
     public DocSubjectType(String subjectTypeName) {
         this.subjectTypeName = subjectTypeName;
     }

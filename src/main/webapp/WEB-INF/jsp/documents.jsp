@@ -149,7 +149,7 @@
 
     function initDocSubjectTypes(data) {
         $.each(data, function () {
-            $('#docSubjectType').append(new Option(this.subjectTypeName, this.id));
+            $('#docSubjectType').append(new Option(this.subjectTypeName, this.subjectTypeName));
         });
     }
 
